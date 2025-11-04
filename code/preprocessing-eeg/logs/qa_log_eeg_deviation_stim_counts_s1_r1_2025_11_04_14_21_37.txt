@@ -1,0 +1,379 @@
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300001
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300001Subject folders!
+sub-3300001 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300019
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300019Subject folders!
+sub-3300019 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300018
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300018Subject folders!
+sub-3300018 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300017
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300017Subject folders!
+sub-3300017 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300016
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300016Subject folders!
+sub-3300016 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300015
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300015Subject folders!
+sub-3300015 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300083
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300083Subject folders!
+sub-3300083 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300082
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300082Subject folders!
+sub-3300082 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300115
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300115Subject folders!
+sub-3300115 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300114
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300114Subject folders!
+sub-3300114 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300116
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300116Subject folders!
+sub-3300116 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300128
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300128Subject folders!
+sub-3300128 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300129
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300129Subject folders!
+sub-3300129 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300138
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300138Subject folders!
+sub-3300138 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300002
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300002Subject folders!
+sub-3300002 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300003
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300003Subject folders!
+sub-3300003 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300035
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300035Subject folders!
+sub-3300035 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300034
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300034Subject folders!
+sub-3300034 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300032
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300032Subject folders!
+sub-3300032 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300030
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300030Subject folders!
+sub-3300030 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300028
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300028Subject folders!
+sub-3300028 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300004
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300004Subject folders!
+sub-3300004 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300044
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300044Subject folders!
+sub-3300044 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300043
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300043Subject folders!
+sub-3300043 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300041
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300041Subject folders!
+sub-3300041 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300038
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300038Subject folders!
+sub-3300038 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300037
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300037Subject folders!
+sub-3300037 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300103
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300103Subject folders!
+sub-3300103 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300102
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300102Subject folders!
+sub-3300102 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300122
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300122Subject folders!
+sub-3300122 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300139
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300139Subject folders!
+sub-3300139 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300140
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300140Subject folders!
+sub-3300140 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300143
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300143Subject folders!
+sub-3300143 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300006
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300006Subject folders!
+sub-3300006 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300051
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300051Subject folders!
+sub-3300051 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300050
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300050Subject folders!
+sub-3300050 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300048
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300048Subject folders!
+sub-3300048 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300047
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300047Subject folders!
+sub-3300047 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300046
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300046Subject folders!
+sub-3300046 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300120
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300120Subject folders!
+sub-3300120 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300141
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300141Subject folders!
+sub-3300141 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300142
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300142Subject folders!
+sub-3300142 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300008
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300008Subject folders!
+sub-3300008 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300057
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300057Subject folders!
+sub-3300057 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300056
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300056Subject folders!
+sub-3300056 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300054
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300054Subject folders!
+sub-3300054 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300053
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300053Subject folders!
+sub-3300053 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300052
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300052Subject folders!
+sub-3300052 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300112
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300112Subject folders!
+sub-3300112 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300111
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300111Subject folders!
+sub-3300111 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300135
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300135Subject folders!
+sub-3300135 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300136
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300136Subject folders!
+sub-3300136 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300009
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300009Subject folders!
+sub-3300009 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300063
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300063Subject folders!
+sub-3300063 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300062
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300062Subject folders!
+sub-3300062 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300060
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300060Subject folders!
+sub-3300060 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300059
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300059Subject folders!
+sub-3300059 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300058
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300058Subject folders!
+sub-3300058 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300010
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300010Subject folders!
+sub-3300010 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300069
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300069Subject folders!
+sub-3300069 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300068
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300068Subject folders!
+sub-3300068 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300067
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300067Subject folders!
+sub-3300067 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300066
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300066Subject folders!
+sub-3300066 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300064
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300064Subject folders!
+sub-3300064 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300088
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300088Subject folders!
+sub-3300088 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300084
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300084Subject folders!
+sub-3300084 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300118
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300118Subject folders!
+sub-3300118 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300119
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300119Subject folders!
+sub-3300119 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300126
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300126Subject folders!
+sub-3300126 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300127
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300127Subject folders!
+sub-3300127 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300134
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300134Subject folders!
+sub-3300134 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300013
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300013Subject folders!
+sub-3300013 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300074
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300074Subject folders!
+sub-3300074 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300073
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300073Subject folders!
+sub-3300073 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300072
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300072Subject folders!
+sub-3300072 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300071
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300071Subject folders!
+sub-3300071 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300070
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300070Subject folders!
+sub-3300070 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300110
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300110Subject folders!
+sub-3300110 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300109
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300109Subject folders!
+sub-3300109 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300124
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300124Subject folders!
+sub-3300124 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300125
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300125Subject folders!
+sub-3300125 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300133
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300133Subject folders!
+sub-3300133 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300147
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300147Subject folders!
+sub-3300147 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300014
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300014Subject folders!
+sub-3300014 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300081
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300081Subject folders!
+sub-3300081 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300079
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300079Subject folders!
+sub-3300079 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300078
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300078Subject folders!
+sub-3300078 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300077
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300077Subject folders!
+sub-3300077 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300076
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300076Subject folders!
+sub-3300076 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300107
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300107Subject folders!
+sub-3300107 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300106
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300106Subject folders!
+sub-3300106 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300131
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300131Subject folders!
+sub-3300131 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300132
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300132Subject folders!
+sub-3300132 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300027
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300027Subject folders!
+sub-3300027 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300026
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300026Subject folders!
+sub-3300026 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300025
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300025Subject folders!
+sub-3300025 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300024
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300024Subject folders!
+sub-3300024 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300021
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300021Subject folders!
+sub-3300021 HAS deviation.txt. Processing EEG files...
+sub-3300021: Loading file sub-3300021_all_eeg_s1_r1_e1_untilBlock6condition2.vhdr...
+pop_loadbv(): reading header file
+Done.
+pop_loadbv(): reading EEG data
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300093
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300093Subject folders!
+sub-3300093 HAS deviation.txt. Processing EEG files...
+sub-3300093: Loading file sub-3300093_all_eeg_s1_r1_e1_memory-tests-and-flanker.vhdr...
+pop_loadbv(): reading header file
+Done.
+pop_loadbv(): reading EEG data
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300101
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300101Subject folders!
+sub-3300101 HAS deviation.txt. Processing EEG files...
+sub-3300101: Loading file sub-3300101_all_eeg_s1_r1_e1_flanker-and-reading-conditions-only.vhdr...
+pop_loadbv(): reading header file
+Done.
+pop_loadbv(): reading EEG data
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300148
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300148Subject folders!
+sub-3300148 HAS deviation.txt. Processing EEG files...
+sub-3300148: Loading file sub-3300148_all_eeg_s1_r1_e1_block-5-alone-reading-onward-and-flanker-only.vhdr...
+pop_loadbv(): reading header file
+Done.
+pop_loadbv(): reading EEG data
+pop_loadbv(): scaling EEG data
+pop_loadbv(): scaling EEG data
+pop_loadbv(): scaling EEG data
+pop_loadbv(): scaling EEG data
+pop_loadbv(): reading marker file
+Done.
+sub-3300093: File sub-3300093_all_eeg_s1_r1_e1_memory-tests-and-flanker.vhdr has 360 NONSOC and 360 SOC stimulus events.
+sub-3300093: Loading file sub-3300093_all_eeg_s1_r1_e1_reading.vhdr...
+pop_loadbv(): reading header file
+Done.
+pop_loadbv(): reading EEG data
+pop_loadbv(): scaling EEG data
+pop_loadbv(): reading marker file
+Done.
+sub-3300148: File sub-3300148_all_eeg_s1_r1_e1_block-5-alone-reading-onward-and-flanker-only.vhdr has 360 NONSOC and 360 SOC stimulus events.
+sub-3300148: Loading file sub-3300148_all_eeg_s1_r1_e1_observed-reading-to-block-5-alone-reading.vhdr...
+pop_loadbv(): reading header file
+Done.
+pop_loadbv(): reading EEG data
+pop_loadbv(): scaling EEG data
+pop_loadbv(): reading marker file
+pop_loadbv(): reading marker file
+Done.
+sub-3300093: File sub-3300093_all_eeg_s1_r1_e1_reading.vhdr has 0 NONSOC and 0 SOC stimulus events.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300092
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300092Subject folders!
+sub-3300092 has no deviation.txt. Skipping.
+Done.
+sub-3300101: File sub-3300101_all_eeg_s1_r1_e1_flanker-and-reading-conditions-only.vhdr has 360 NONSOC and 360 SOC stimulus events.
+sub-3300101: Loading file sub-3300101_all_eeg_s1_r1_e1_memory-tests-only.vhdr...
+pop_loadbv(): reading header file
+Done.
+pop_loadbv(): reading EEG data
+pop_loadbv(): scaling EEG data
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300121
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300121Subject folders!
+sub-3300121 has no deviation.txt. Skipping.
+pop_loadbv(): reading marker file
+Done.
+sub-3300101: File sub-3300101_all_eeg_s1_r1_e1_memory-tests-only.vhdr has 0 NONSOC and 0 SOC stimulus events.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300099
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300099Subject folders!
+sub-3300099 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300123
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300123Subject folders!
+sub-3300123 has no deviation.txt. Skipping.
+pop_loadbv(): reading marker file
+Done.
+sub-3300021: File sub-3300021_all_eeg_s1_r1_e1_untilBlock6condition2.vhdr has 240 NONSOC and 360 SOC stimulus events.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300091
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300091Subject folders!
+sub-3300091 has no deviation.txt. Skipping.
+Processing: /home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300089
+/home/data/NDClab/datasets/read-study2-dataset/sourcedata/raw/s1_r1/eeg/sub-3300089Subject folders!
+sub-3300089 has no deviation.txt. Skipping.
+pop_loadbv(): reading marker file
+Done.
+sub-3300148: File sub-3300148_all_eeg_s1_r1_e1_observed-reading-to-block-5-alone-reading.vhdr has 0 NONSOC and 0 SOC stimulus events.
+
+Successfully wrote results to logs/qa_log_eeg_deviation_stim_counts_s1_r1.csv
