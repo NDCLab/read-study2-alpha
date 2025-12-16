@@ -37,7 +37,8 @@ pattern = 'sub-(\d{7})';
 % Define the stimulus events to count
 stim_events = {'S 41', 'S 42', 'S 43', 'S 44', 'S 51', 'S 52', 'S 53', 'S 54'};
 stim_events_nonsoc = {'S 41', 'S 42', 'S 43', 'S 44'};
-stim_events_soc = {'S 51', 'S 52', 'S 53', 'S 54'}; 
+stim_events_soc = {'S 51', 'S 52', 'S 53', 'S 54'};
+read_stim_markers = {'S255', 'S127'} 
 % --- Log File Setup ---
 datetime_str = datestr(now, 'yyyy_mm_dd_HH_MM_SS');
 log_dir = 'logs';
@@ -111,9 +112,9 @@ parfor i = 1:length(subject_data_paths)
     
     % Create a temporary table for this subject's results
     num_files = length(eeg_files);
-    sub_table = table('Size', [num_files, 4], ...
-                      'VariableTypes', {'string', 'string', 'double', 'double'}, ...
-                      'VariableNames', {'Subject', 'Filename', 'StimCountNonSoc', 'StimCountSoc'});
+    sub_table = table('Size', [num_files, 5], ...
+                      'VariableTypes', {'string', 'string', 'double', 'double', 'double'}, ...
+                      'VariableNames', {'Subject', 'Filename', 'StimCountNonSoc', 'StimCountSoc', 'READStimCount'});
 
     % Loop through each .vhdr file
     for f = 1:num_files
@@ -138,6 +139,7 @@ parfor i = 1:length(subject_data_paths)
             stim_count_nonsoc = sum(ismember(string({EEG.event.type}), stim_events_nonsoc));
             % stim_count_soc = length(selected_events_soc);
             stim_count_soc = sum(ismember(string({EEG.event.type}), stim_events_soc));
+            stim_count_read = sum(ismember(string({EEG.event.type}), read_stim_markers));
             fprintf('sub-%s: File %s has %d NONSOC and %d SOC stimulus events.\n', sub, fname, stim_count_nonsoc, stim_count_soc);
 
         catch ME
@@ -147,7 +149,7 @@ parfor i = 1:length(subject_data_paths)
         end
         
         % Add data to the subject's temporary table
-        sub_table(f, :) = {string(sub), string(fname), stim_count_nonsoc, stim_count_soc};
+        sub_table(f, :) = {string(sub), string(fname), stim_count_nonsoc, stim_count_soc, stim_count_read};
     end
     
     % Store this subject's table in the main collector cell
