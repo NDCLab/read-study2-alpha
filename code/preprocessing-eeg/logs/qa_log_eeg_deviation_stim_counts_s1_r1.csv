@@ -1,8 +1,0 @@
-Subject,Filename,StimCountNonSoc,StimCountSoc
-3300021,sub-3300021_all_eeg_s1_r1_e1_untilBlock6condition2.vhdr,240,360
-3300093,sub-3300093_all_eeg_s1_r1_e1_memory-tests-and-flanker.vhdr,360,360
-3300093,sub-3300093_all_eeg_s1_r1_e1_reading.vhdr,0,0
-3300101,sub-3300101_all_eeg_s1_r1_e1_flanker-and-reading-conditions-only.vhdr,360,360
-3300101,sub-3300101_all_eeg_s1_r1_e1_memory-tests-only.vhdr,0,0
-3300148,sub-3300148_all_eeg_s1_r1_e1_block-5-alone-reading-onward-and-flanker-only.vhdr,360,360
-3300148,sub-3300148_all_eeg_s1_r1_e1_observed-reading-to-block-5-alone-reading.vhdr,0,0

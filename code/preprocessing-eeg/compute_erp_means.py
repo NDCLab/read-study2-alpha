@@ -37,7 +37,7 @@ timeCell = [
 if laplacian:
     path_to_mat = glob(f"{analysis_path}/derivatives/preprocessed/erp_check/{session}/read_Resp_erps_csd_min_6t_*2025*.mat")[0]
 else:
-    path_to_mat = glob(f"{analysis_path}/derivatives/read_flanker_Resp_erps_min_6t_12_11_2025_18_44_10.mat")[0]
+    path_to_mat = glob(f"{analysis_path}/derivatives/read_flanker_Resp_erps_min_6t_*2025*.mat")[0]
     #path_to_mat = glob(f"{analysis_path}/derivatives/preprocessed/erp_check/{session}/read_Resp_erps_min_6t_02_11_2025_15_17_33.mat")[0]
 
 path_to_eeg = glob(f"{dataset_path}/derivatives/preprocessed/sub-3300002/{session}/eeg/sub-3300002_all_eeg_processed_data_{session}_e1.set")[0]

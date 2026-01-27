@@ -31,7 +31,7 @@ analysis_dir = '/home/data/NDClab/analyses/read-study2-alpha';
 
 %location of dataset folder
 dataset_dir = '/home/data/NDClab/datasets/read-study2-dataset';
-summary_csv_path = '/home/data/NDClab/analyses/read-study2-alpha/derivatives/behavior/s1_r1/summary_13_11_2025_10_50_53.csv';
+summary_csv_path = '/home/data/NDClab/analyses/read-study2-alpha/derivatives/behavior/s1_r1/summary_17_12_2025_14_30_36.csv';
 
 % Setting up other things
 
