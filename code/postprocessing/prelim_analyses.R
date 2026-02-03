@@ -81,11 +81,8 @@ summary(model)
 model <- lm(spaip ~ ERN_diff + age, data = df_wide)
 summary(model)
 
-### Predict FNE----
+## Mixed-effect modeling----
+# need to standardize ERN first
+df_summary$ERN <- scale(df_summary$ERN)
 
-model <- lm(spaic ~ ERN_diff + age, data = df_wide)
-summary(model)
-
-model <- lm(spaip ~ ERN_diff + age, data = df_wide)
-summary(model)
-
+glmer(ERN ~ (1|sub), family=binomial, data=df_summary)
