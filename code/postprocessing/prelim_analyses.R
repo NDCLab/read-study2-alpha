@@ -2,10 +2,11 @@
 # Load libraries----
 library(readr)
 library(ggplot2)
-library(glmmTMB)
-library(lme4)
+library(lmerTest)
 library(dplyr)
 library(tidyr)
+library(reghelper)
+library(sjPlot)
 
 # Initialize director folders----
 derivatives_dir <- "/home/data/NDClab/analyses/read-study2-alpha/derivatives/"
@@ -21,7 +22,7 @@ read_nonsoc <- subset(read_df, soc == 0)
 summary(read_soc$rt)
 summary(read_nonsoc$rt)
 
-t.test(read_soc$rt, read_nonsoc$rt, paired = TRUE)
+#t.test(read_soc$rt, read_nonsoc$rt, paired = TRUE)
 
 # Aim 1: Mixed-effect model predicting Social Anxiety from Social Observation, Age, and ERN----
 ## Aggregate variables of interest----
@@ -59,30 +60,39 @@ df_summary <- df_summary %>% filter(!is.na(ERN))
 df_summary <- df_summary %>% filter(!is.na(ERN))
 df_summary <- df_summary %>% filter(!is.na(spaip))
 
-## Predict SPAIC from ERN diff and age----
-model_lm_c <- lm(spaic ~ ERN_diff + age, data = df_wide)
-summary(model_lm_c)
-
-## Predict SPAIP from ERN diff and age----
-model_lm_p <- lm(spaip ~ ERN_diff + age, data = df_wide)
-summary(model_lm_p)
-
-
-## Testing difference score----
-
-df_wide <- df_wide %>%
-  mutate(
-    ERN_diff = ERN_social - ERN_alone
-  )
-### Predict SPAIC ERN (difference score) and age in each condition----
-model <- lm(spaic ~ ERN_diff + age, data = df_wide)
-summary(model)
-### Predict SPAIP from ERN (difference score) and ERN (difference) and age in each condition----
-model <- lm(spaip ~ ERN_diff + age, data = df_wide)
-summary(model)
+## Scale Predictors----
+df_summary$age <- scale(df_summary$age, center = TRUE, scale = TRUE)
+df_summary$spaip <- scale(df_summary$spaip, center = TRUE, scale = TRUE)
+df_summary$spaic <- scale(df_summary$spaic, center = TRUE, scale = TRUE)
+df_wide$age <- scale(df_wide$age, center = TRUE, scale = TRUE)
+df_wide$spaip <- scale(df_wide$spaip, center = TRUE, scale = TRUE)
+df_wide$spaic <- scale(df_wide$spaic, center = TRUE, scale = TRUE)
 
 ## Mixed-effect modeling----
-# need to standardize ERN first
-df_summary$ERN <- scale(df_summary$ERN)
+model_lm_mixed_spaip <- lmer(ERN ~ age + soc + spaip + (1|sub), data = df_summary_age_subset)
+summary(model_lm_mixed_spaip)
 
-glmer(ERN ~ (1|sub), family=binomial, data=df_summary)
+model_lm_mixed_spaic <- lmer(ERN ~ age + soc + spaic + (1|sub), data = df_summary_age_subset)
+summary(model_lm_mixed_spaic)
+
+## Test for interaction----
+model_lm_mixed_spaic_int <- lmer(ERN ~ age + spaic + soc + (1|sub), data = df_summary_age_subset)
+summary(model_lm_mixed_spaic_int)
+
+model_lm_mixed_spaip_int <- lmer(ERN ~ age + spaip + soc + (1|sub), data = df_summary_age_subset)
+summary(model_lm_mixed_spaip_int)
+
+## Simple slopes to interpret interaction better
+
+simple_slopes(model_lm_mixed_spaip_int)
+simple_slopes(model_lm_mixed_spaic_int)
+
+## Plotting this interaction
+plot_model(model_lm_mixed_spaic_int, type = "pred", terms = c("age", "spaic", "soc"),
+           title = "Predicting ERN from Child Reported Social Anxiety, Age, and Condition",
+           axis.title = c("Age", "Delta ERN"),
+           legend.title = "Social Anxiety")
+plot_model(model_lm_mixed_spaip_int, type = "pred", terms = c("age", "spaip", "soc"),
+           title = "Predicting ERN from Parent Reported Social Anxiety, Age, and Condition",
+           axis.title = c("Age", "Delta ERN"),
+           legend.title = "Social Anxiety")
