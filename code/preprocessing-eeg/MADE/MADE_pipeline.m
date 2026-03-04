@@ -392,11 +392,13 @@ parfor file_locater_counter = 1:length(subjects_to_process) %1:4
 
             %% STEP 4: Change sampling rate
             if down_sample==1
+		disp('DEBUG 17');
                 if floor(sampling_rate) > EEG.srate
                     error ('Sampling rate cannot be higher than recorded sampling rate');
                 elseif floor(sampling_rate) ~= EEG.srate
                     EEG = pop_resample( EEG, sampling_rate);
                     EEG = eeg_checkset( EEG );
+		disp('DEBUG 18');
                 end
             end
 

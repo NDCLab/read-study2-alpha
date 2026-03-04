@@ -115,7 +115,7 @@ for subject=1:length(datafile_names)
     counts_table.Properties.VariableNames = {'fileName', 's_resp_incon_error', 's_resp_incon_corr', 'ns_resp_incon_error', 'ns_resp_incon_corr', 's_stim_incon_corr', 's_stim_con_corr', 'ns_stim_incon_corr', 'ns_stim_con_corr'};
 
     %write/append table to disk
-    writetable(counts_table, [output_location filesep 'thrive_trialCounts_RespAndStim_', date, '.csv'], "WriteMode", "append");
+    writetable(counts_table, [output_location filesep 'read_trialCounts_RespAndStim_', date, '.csv'], "WriteMode", "append");
 
 end
 
