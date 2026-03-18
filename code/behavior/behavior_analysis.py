@@ -50,7 +50,8 @@ start = time.time()
 session = "s1_r1"
 input_dataset_path = "/home/data/NDClab/datasets/read-study2-dataset/"
 output_dataset_path = "/home/data/NDClab/analyses/read-study2-alpha/"
-data_path = f"sourcedata/raw/s1_r1/psychopy/"
+data_path = f"sourcedata/checked/"
+sub_path = f"{session}/psychopy/"
 output_path = f"derivatives/behavior/{session}/"
 
 date_time = datetime.datetime.now().strftime("%d_%m_%Y_%H_%M_%S")
@@ -61,8 +62,8 @@ n_trials = 40
 valid_rt_thresh = 0.150
 valid_trial_count = 320
 #sub_folders = [i for i in os.listdir(input_dataset_path + data_path) if i.startswith("sub-")]
-sub_folders = glob.glob(f"{input_dataset_path}/{data_path}/sub-*/*")
-subjects = sorted(set([re.findall(r'\d+', item.split("/")[-2])[0] for item in sub_folders]))
+sub_folders = glob.glob(f"{input_dataset_path}/{data_path}/sub-*/{sub_path}/*")
+subjects = sorted(set([re.findall(r'\d+', item.split("/")[-4])[0] for item in sub_folders]))
 print(subjects)
 processing_log = dict()
 summary_columns = [
@@ -85,7 +86,7 @@ for condition in [0, 1]:
 
 for sub in subjects:
     processing_log["sub"].append(sub)    
-    subject_folder = (input_dataset_path + data_path + "sub-" + sub)
+    subject_folder = (input_dataset_path + data_path + "sub-" + sub + os.sep + sub_path)
     num_files = len(os.listdir(subject_folder))
     if (np.any(["no-data" in i for i in os.listdir(subject_folder)])):
         print("sub-{} has no data, skipping...".format(sub))
@@ -95,7 +96,7 @@ for sub in subjects:
             processing_log[c+"_nonsoc"].append(np.nan)
             processing_log[c+"_soc"].append(np.nan)
         continue
-    elif ((num_files != 6) or (np.any(["deviation" in i for i in os.listdir(subject_folder)])) or (np.any(["Issue" in i for i in os.listdir(subject_folder)]))):
+    elif ((num_files != 6) or (np.any(["deviation" in i for i in os.listdir(subject_folder)])) or (np.any(["Issue" in i for i in os.listdir(subject_folder)])) or (np.any(["issue" in i for i in os.listdir(subject_folder)]))):
         print("sub-{} has a deviation in psychopy data ({} files), skipping ...".format(sub, num_files))
         sorted_paths = sort_csvs_by_date_pd(glob.glob(f"{subject_folder}/*.csv"))
         data = pd.concat([pd.read_csv(f) for f in sorted_paths], ignore_index=True)
