@@ -1,0 +1,80 @@
+%  This script changes the event structure of epoched EEG to include a
+%  "Condition" field that will be used in TF, ITPS, ICPS/wPLI script
+
+clear all
+
+% Where the epoched data are located
+data_location = '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed';
+
+% Where you would like your epoched and newly labeled data saved
+save_location = '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/t-fModified';
+
+%Location of EEGlab
+%addpath(genpath([main_dir filesep 'code' filesep 'eeglab13_4_4b']));% enter the path of the EEGLAB folder in this line
+addpath(genpath('/home/data/NDClab/tools/lab-devOps/scripts/MADE_pipeline_standard/eeglab13_4_4b'));% enter the path of the EEGLAB folder in this line
+addpath(pwd);
+%remove path to octave functions inside matlab to prevent errors when
+%rmpath([main_dir filesep 'code' filesep 'eeglab13_4_4b' filesep 'functions' filesep 'octavefunc' filesep 'signal'])
+rmpath(['/home/data/NDClab/tools/lab-devOps/scripts/MADE_pipeline_standard/eeglab13_4_4b' filesep 'functions' filesep 'octavefunc' filesep 'signal'])
+
+% Session
+session = 's1_r1';
+
+% Create List of subjects to loop from folders in checked
+subfolders = dir(fullfile(data_location, 'sub-*'));
+subfolders = subfolders([subfolders.isdir]);
+subnum = dir([data_location '*.set']); % Use regex to find your files 
+subject= {subnum.name};
+subject_list = {};
+count = 1;
+for ii=1:length(subfolders)
+    eegsetpath = fullfile(data_location, subfolders(ii).name, session, 'eeg');
+    if exist(eegsetpath, 'dir')
+        eeg_files = dir(fullfile(eegsetpath, '*all_eeg_processed_data*.set'));
+        for jj = 1:length(eeg_files)
+            subject_list{count} = fullfile(eegsetpath, eeg_files(jj).name);
+            count = count + 1;
+        end
+    end
+end
+
+% Loop through each subject 
+for sub=1:length(subject_list)
+
+    subject = subject_list{sub};
+    fprintf('\n\n\n*** Processing subject %d (%s) ***\n\n\n', sub, subject);
+
+    % Load data
+    EEG=pop_loadset(subject);
+    EEG = pop_selectevent( EEG, 'latency','-.1 <= .1','deleteevents','on');
+    
+    
+% add label to the event structure
+EEG = pop_editeventfield( EEG, 'indices',  strcat('1:', int2str(length(EEG.event))), 'Condition','NaN');
+EEG = eeg_checkset( EEG );
+% check the event structure for consistency
+EEG = eeg_checkset(EEG, 'eventconsistency');
+
+% Looping through each trial
+for t=1:length(EEG.event)
+    
+    % Condition that we want to concatenate into one variable - THIS WILL
+    % NEED TO BE CHANGED FOR EACH STUDY !!!!
+    eventType = {EEG.event.eventType};
+    congruency = {EEG.event.congruency};
+    accuracy = {EEG.event.accuracy};
+    
+    % Selecting specific variables for this trial
+    vars_to_join = {eventType{t}, num2str(congruency{t}), num2str(accuracy{t}) };
+    EEG.event(t).Condition = strjoin(vars_to_join, '_');
+    
+end
+
+%save data with added event field "Condition"
+        %extract just the filename for saving
+        [~, filename, ext] = fileparts(subject);
+        filename_with_ext = [filename ext];
+        EEG = pop_editset(EEG, 'setname', filename);
+        EEG = pop_saveset( EEG, 'filename', filename_with_ext,'filepath', save_location);
+
+end %end loop through subjects

@@ -58,6 +58,26 @@ end
 %load the mat file that has the erps and subject list
 load('C:\Users\cknowlto\Documents\OneDrive - Florida International University\Documents\ReadPrelimAnalysis\EEG_training\Data\Processed_Data\postprocessing\read_flanker_Resp_erps_min_6t_12_11_2025_18_44_10.mat')
 
+% Read subject list from R output - final subject IDs
+subject_list_file = '/home/data/NDClab/analyses/read-study2-alpha/derivatives/final_subject_list.txt';
+fid = fopen(subject_list_file, 'r');
+subjects_to_include = textscan(fid, '%s');
+subjects_to_include = subjects_to_include{1};
+fclose(fid);
+
+keep_indices = false(length(erpDat_subIds), 1);
+for i = 1:length(erpDat_subIds)
+    if any(strcmp(subjects_to_include, erpDat_subIds{i}))
+        keep_indices(i) = true;
+    end
+end
+
+% Filter the data
+erpDat_data = erpDat_data(keep_indices, :, :, :);
+erpDat_subIds = erpDat_subIds(keep_indices);
+
+fprintf('Filtered to %d subjects matching R analysis (started with %d)\n', sum(keep_indices), length(keep_indices));
+
 %make a copy/rename the erp matrix 
 allData = erpDat_data;
 

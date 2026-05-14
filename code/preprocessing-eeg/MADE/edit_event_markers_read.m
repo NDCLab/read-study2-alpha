@@ -161,7 +161,13 @@ for t = all_stimMarkers_eventNums %t = event numbers stored in all_stimMarkers_e
 
     %figure out if a response was made. if so, identify event # of
     %response marker, rt, rt validity, accuracy, presence of extra responses.
-    switch EEG.event(t+1).type
+    % fix "Index exceeds the number of array elements." for last-event-with-no-response
+    if t+1 > total_eventNums
+        currentEventType = 'NONE';
+    else
+        currentEventType = EEG.event(t+1).type;
+    end
+    switch currentEventType
 
         case first_RespMarkers %if there was a response
 

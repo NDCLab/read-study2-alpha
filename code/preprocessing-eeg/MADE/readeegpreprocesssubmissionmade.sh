@@ -5,8 +5,8 @@
 #SBATCH --ntasks=1               	# total number of tasks across all nodes
 #SBATCH --mail-type=end          	# send email when job ends
 #SBATCH --mail-user=cknowlto@fiu.edu  # email address
-#SBATCH --mem=128G
-#SBATCH --cpus-per-task=10
+#SBATCH --mem=200G
+#SBATCH --cpus-per-task=2
 #SBATCH --account=iacc_gbuzzell	# SLURM account name (delete these 3 lines if not running a highmem job)
 #SBATCH --partition=highmem1       # partition name (use high memory nodes)
 #SBATCH --qos=highmem1             # QOS
@@ -15,4 +15,4 @@
 module load matlab-2021b;
 pwd; hostname; date
 
-matlab -nodisplay -r "addpath('/home/data/NDClab/analyses/read-study2-alpha/code/preprocessing-eeg/MADE'); path; MADE_pipeline('read-study2-dataset','3300002/3300003/3300004/3300006/3300008/3300009/3300010/3300013/3300014/3300015/3300016/3300017/3300018/3300019/3300021/3300024/3300025/3300026/3300027/3300028/3300030/3300032/3300034/3300035/3300037/3300038/3300041/3300043/3300044/3300046/3300047/3300048/3300050/3300051/3300052/3300053/3300054/3300056/3300057/3300058/3300059/3300060/3300062/3300063/3300064/3300066/3300067/3300068/3300069/3300070/3300071/3300072/3300073/3300074/3300076/3300077/3300078/3300079/3300081/3300082/3300083/3300084/3300088/3300089/3300091/3300092/3300093/3300099/3300101/3300102/3300103/3300106/3300107/3300109/3300110/3300111/3300112/3300114/3300115/3300116/3300118/3300119/3300120/3300121/3300122/3300123/3300124/3300125/3300126/3300127/3300128/3300129/3300131/3300132/3300133/3300134/3300135/3300136/3300138/3300139/3300140/3300141/3300142/3300143/3300147/3300148','s1_r1'); exit"
+matlab -nodisplay -r "addpath('/home/data/NDClab/analyses/read-study2-alpha/code/preprocessing-eeg/MADE'); path; MADE_pipeline('read-study2-dataset','3300109/3300111','s1_r1'); exit"

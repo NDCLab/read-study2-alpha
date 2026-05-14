@@ -1,4 +1,4 @@
-# This script was compiled by Charles Knowlton in the NDC Lab for conducting preliminary analyses of READ Study 2
+# This script was created by Charles Knowlton in the NDC Lab for conducting preliminary analyses of READ Study 2 flanker EEG + behavioral data
 # Load libraries----
 library(readr)
 library(ggplot2)
@@ -10,260 +10,493 @@ library(ggeffects)
 library(interactions)
 library(patchwork)
 
-# Initialize director folders----
-derivatives_dir <- "/home/data/NDClab/analyses/read-study2-alpha/derivatives/"
+# Initialize directory folders and load data----
+derivatives_dir <- "/home/data/NDClab/analyses/read-study2-alpha/derivatives/csv/s1_r1"
+read_df <- read_csv(file.path(derivatives_dir, "read_long_s1_r1_14_04_2026_13_45_42.csv"))
 
-# Load in data----
-read_df <- read_csv(file.path(derivatives_dir, "read_long_s1_r1_30_01_2026_15_00_02.csv"))
+#enter participants that failed deception check (i.e. they answered "very much" to did you believe that no one was watching you at all?)
+#failed_deception <- c("3300118", "3300026", "3300071", "3300131", "3300123", "3300067", "3300052", "3300013")
 
-# Aim 1: Mixed-effect model predicting Social Anxiety from Social Observation, Age, and ERN----
+#read_df <- read_df |> filter(!(sub %in% failed_deception))
+
+# Prepare data----
 ## Aggregate variables of interest----
-df_summary <- read_df %>%
-  group_by(sub, soc) %>%
+df_summary_long <- read_df |>
+  group_by(sub, soc) |>
   summarise(
-    ERN = amplitude[acc == 0] - amplitude[acc == 1],
+    deltaERN = first(ERN_min_CRN),
+    thetapower = first(power_early_diff),
     spaic = first(spaic_scrdTotal_s1_r1_e1),
     age = first(age_m),
     spaip = first(spaip_scrdTotal_s1_r1_e1),
-    acc = first(accuracy_score),
-    staic = first(staic_scrdTotal_s1_r1_e1)
+    sex = first(sex),
+    #acc_score = first(accuracy_score),
+    #invalid_rt_percent = first(invalid_rt_percent),
+    #rt = first(rt),
+    #rt_con = first(rt_con),
+    #skipped_percent = first(skipped_percent),
+    #acc_con = first(acc_con),
+    #rt_incon = first(rt_incon),
+    #acc_incon = first(acc_incon)
   )
 
-## Convert soc to factor w/ 2 levels----
-df_summary$soc <- factor(df_summary$soc, levels = c(0, 1), labels = c("alone", "social"))
-
-## lm----
-df_wide <- df_summary %>%
-  pivot_wider(
-    names_from = soc,
-    values_from = ERN,
-    names_prefix = "ERN_"
-  )
+#df_summary_long <- df_summary_long |> subset(
+#  age > mean(age) - (3 * sd(age)) & age < mean(age) + (3 * sd(age))
+#)
 
 ## Omit NaNs----
-participants_remove <- c() # Stored vector of participants with Nan for both conditions 
-p_i <- 1 # Looping variable for index
-for (i in 1:nrow(df_wide)){
-  p_id = as.character(df_wide$sub[i])
-  if ((is.na(df_wide$ERN_alone[i]) == TRUE) & (is.na(df_wide$ERN_social[i]) == FALSE)){
-    print(paste("Participant's ERN alone (social is valid) is NAN, ID:", p_id))
-  }
-  if ((is.na(df_wide$ERN_social[i]) == TRUE) & (is.na(df_wide$ERN_alone[i]) == FALSE)){
-    print(paste("Participant's ERN social (alone is valid) is NAN, ID:", p_id))
-  }
-  if ((is.na(df_wide$ERN_social[i]) == TRUE) & (is.na(df_wide$ERN_alone[i]) == TRUE)){
-    print(paste("Participant has ERN NaN for both conditions, ID:", p_id))
-    participants_remove[p_i] <- p_id
-    p_i <- p_i + 1
-  }
-}
+# NaN values is the data set were assigned during data aggregation, therefore they reflect either:
+# 1.) Missing data
+# 2.) Outlier based NaN assignment (+- 3 SD )
+# participants_remove <- c() # Stored vector of participants with Nan for both conditions 
+# p_i <- 1 # Looping variable for index
+# for (i in 1:nrow(df_summary_wide)){
+#   p_id = as.character(df_summary_wide$sub[i])
+#   if ((is.na(df_summary_wide$ERN_alone[i]) == TRUE) & (is.na(df_summary_wide$ERN_social[i]) == FALSE)){
+#     print(paste("Participant's ERN alone (social is valid) is NAN, ID:", p_id))
+#   }
+#   if ((is.na(df_summary_wide$ERN_social[i]) == TRUE) & (is.na(df_summary_wide$ERN_alone[i]) == FALSE)){
+#     print(paste("Participant's ERN social (alone is valid) is NAN, ID:", p_id))
+#   }
+#   if ((is.na(df_summary_wide$ERN_social[i]) == TRUE) & (is.na(df_summary_wide$ERN_alone[i]) == TRUE)){
+#     print(paste("Participant has ERN NaN for both conditions, ID:", p_id))
+#     participants_remove[p_i] <- p_id
+#     p_i <- p_i + 1
+#   }
+# }
 
 # Remove participants from long and wide data frames that contained no ERN data
-df_wide <- df_wide %>% filter(!(sub %in% participants_remove))
-df_summary <- df_summary %>% filter(!(sub %in% participants_remove))
+#df_wide <- df_wide %>% filter(!(sub %in% participants_remove))
+#df_summary <- df_summary %>% filter(!(sub %in% participants_remove))
 # Remove participants with no SPAIP data
-df_wide <- df_wide %>% filter(!is.na(spaip))
-df_summary <- df_summary %>% filter(!is.na(spaip))
+#df_wide <- df_wide %>% filter(!is.na(spaip))
+#df_summary <- df_summary %>% filter(!is.na(spaip))
 # Remove participants with no SPAIC data
-df_wide <- df_wide %>% filter(!is.na(spaic))
-df_summary <- df_summary %>% filter(!is.na(spaic))
+#df_wide <- df_wide %>% filter(!is.na(spaic))
+#df_summary <- df_summary %>% filter(!is.na(spaic))
 
-## Testing removing participant > -3 SD of age mean
-df_summary_age_subset <- df_summary |> subset(age > 150)
+## Remove any data that is not recorded in both conditions
+df_summary_long <- na.omit(df_summary_long) #note: data was compiled to assign NA to any variable that is +3 or -3 sd from mean as identifying outliers early
+df_summary_long <- df_summary_long |>
+  group_by(sub) |>
+  filter(n() == 2) |>
+  ungroup()
 
-## Scaling variables
-df_summary$age_s    <- scale(df_summary$age)
-df_summary$spaic_s  <- scale(df_summary$spaic)
-df_summary$spaip_s  <- scale(df_summary$spaip)
-df_summary$acc_s    <- scale(df_summary$acc)
+## Scaling variables----
+df_summary_long$age_s <- scale(df_summary_long$age)
+df_summary_long$spaic_s <- scale(df_summary_long$spaic)
+df_summary_long$spaip_s <- scale(df_summary_long$spaip)
+df_summary_long$deltaERN_s <- scale(df_summary_long$deltaERN)
+df_summary_long$thetapower_s <- scale(df_summary_long$thetapower)
 
-## Mixed-effect modeling----
-model_lm_mixed_spaip <- lmer(ERN ~ age_s + soc + spaip_s + (1|sub), data = df_summary)
-summary(model_lm_mixed_spaip)
+## Apply sum contrasts ----
+df_summary_long$soc <- factor(df_summary_long$soc, 
+                              levels = c(0, 1), 
+                              labels = c("alone", "social"))
 
-model_lm_mixed_spaic <- lmer(ERN ~ age_s + soc + spaic_s + (1|sub), data = df_summary)
-summary(model_lm_mixed_spaic)
+df_summary_long$sex <- factor(df_summary_long$sex, 
+                              levels = c(1, 2), 
+                              labels = c("male", "female"))
 
-## Test for interaction----
-model_lm_mixed_spaic_int <- lmer(ERN ~ age_s * spaic_s * soc * acc_s + (1|sub), data = df_summary)
-summary(model_lm_mixed_spaic_int)
+contrasts(df_summary_long$soc) <- rev(contr.sum(2))
+contrasts(df_summary_long$sex) <- rev(contr.sum(2))
 
-model_lm_mixed_spaip_int <- lmer(ERN ~ age_s * spaip_s * soc * acc_s + (1|sub), data = df_summary)
-summary(model_lm_mixed_spaip_int)
+# Aim #1: Social Anxiety x Social Observation x Age predicting ERN model----
+### Mixed effect modeling---- 
+model_lm_spaic_int_lmer <- lmer(deltaERN_s ~ spaic_s * age_s * soc * sex + (1|sub), data = df_summary_long)
+summary(model_lm_spaic_int_lmer)
 
-## Simple slopes to interpret interaction better
+model_lm_spaip_int_lmer <- lmer(deltaERN_s ~ age_s * spaip_s * soc * sex + (1|sub), data = df_summary_long)
+summary(model_lm_spaip_int_lmer)
 
-simple_slopes(model_lm_mixed_spaip_int)
-simple_slopes(model_lm_mixed_spaic_int)
+#### Interaction plots----
 
-## Plotting interaction + orig data
-# Getting predictions for the slopes
-preds_spaic <- ggpredict(model_lm_mixed_spaic_int, terms = c("spaic_s", "age_s", "soc", "acc_s"))
-preds_spaic$soc <- preds_spaic$facet
-# Plotting
-ggplot() +
-  geom_point(data = df_summary, 
-             aes(x = spaic_s, y = ERN, size = acc_s, color = acc_s),
-             alpha = 0.3) +
-  scale_
-  geom_line(data = preds_spaic,
-            aes(x = x, y = predicted, color = group),
-            linewidth = 1) +
-  geom_ribbon(data = preds_spaic, 
-              aes(x = x, ymin = conf.low, ymax = conf.high, fill = group), 
-              alpha = 0.1) +
-  facet_wrap(~soc) +
-  labs(x = "Social Anxiety (SPAIC)", y = "Delta ERN", color = "Age (months)", fill = "Age (months)") +
-  theme_minimal()
+# First, check levels and contrasts to verify they are being generated correctly
+print("Factor levels for soc:")
+print(levels(df_summary_long$soc))
+print("Contrasts:")
+print(contrasts(df_summary_long$soc))
 
-# Getting predictions
-preds_spaip <- ggpredict(model_lm_mixed_spaip_int, terms = c("spaic_s", "age_s", "soc", "acc_s"))
-preds_spaip$soc <- preds_spaip$facet
-# Plotting
-ggplot() +
-  geom_point(data = df_summary, 
-             aes(x = spaip_s, y = ERN_s),
-             alpha = 0.3) +
-  geom_line(data = preds_spaip, 
-            aes(x = x, y = predicted, color = group),
-            linewidth = 1) +
-  geom_ribbon(data = preds_spaip, 
-              aes(x = x, ymin = conf.low, ymax = conf.high, fill = group), 
-              alpha = 0.1) +
-  facet_wrap(~soc) +
-  labs(x = "Social Anxiety (SPAIP)", y = "Delta ERN", color = "Age (months)", fill = "Age (months)") +
-  theme_minimal()
+#Plot only significant relationships
+plot_lm_spaic_int_lmer <- interact_plot(
+  model_lm_spaic_int_lmer, 
+  pred = spaic_s, # X - axis
+  modx = age_s, # Interaction term
+  modx.values = "mean-plus-minus", # Method of tercile subset
+  plot.points = TRUE, 
+  interval = TRUE, # Confidence bands
+  main.title = "SPAIC",
+  x.label = "SPAIC",
+  y.label = "Delta ERN",
+  legend.main = "Age"
+)
 
-## Test for interaction in STAIC----
-## Scaling variables
-read_df$age_s    <- scale(read_df$age_m)
-read_df$spaic_s  <- scale(read_df$spaic_scrdTotal_s1_r1_e1)
-read_df$spaip_s  <- scale(read_df$spaip_scrdTotal_s1_r1_e1)
-read_df$rcadsanxs_s <- scale(read_df$rcads_scrdAnx_s1_r1_e1)
+p_large <- plot_lm_spaic_int_lmer + 
+  theme(
+    text = element_text(size = 16, family = "sans"),           
+    axis.title = element_text(size = 18, family = "sans"),     
+    axis.text = element_text(size = 14, family = "sans"),      
+    plot.title = element_text(size = 20, family = "sans"),     
+    legend.text = element_text(size = 14, family = "sans"),    
+    legend.title = element_text(size = 16, family = "sans")    
+  )
 
-modelspaip <- lmer(amplitude ~ acc + spaip_s * soc + age_s + (1|sub), data = read_df)
-summary(modelspaip)
+ggsave("model_lm_spaip_age_int_lmer.png", 
+       plot = p_large, 
+       width = 10, 
+       height = 7, 
+       units = "in",
+       dpi = 600)
 
-modelspaic <- lmer(amplitude ~ age_s * spaic_s * acc + soc + (1|sub), data = read_df)
-summary(modelspaic)
+plot_lm_spaic_int_lmer <- interact_plot(
+  model_lm_spaic_int_lmer, 
+  pred = spaic_s, # X - axis
+  modx = sex, # Interaction term
+  plot.points = TRUE, 
+  interval = TRUE, # Confidence bands
+  main.title = "SPAIC",
+  x.label = "SPAIC",
+  y.label = "Delta ERN",
+  mod2.labels = c("Male", "Female"),
+  legend.main = "Sex"
+)
 
+p_large <- plot_lm_spaic_int_lmer + 
+  theme(
+    text = element_text(size = 16, family = "sans"),           
+    axis.title = element_text(size = 18, family = "sans"),     
+    axis.text = element_text(size = 14, family = "sans"),      
+    plot.title = element_text(size = 20, family = "sans"),     
+    legend.text = element_text(size = 14, family = "sans"),    
+    legend.title = element_text(size = 16, family = "sans")    
+  )
 
-## Testing new plotting method
-# 1. Define the variables for clarity
-# Replace "Level_A" and "Level_B" with your actual acc1 factor levels (e.g., 0 and 1)
-# If acc1 is numeric, choose specific values like mean +/- SD
-my_labels <- c("Low age", "Mean age", "High age")
-# --- Plot for Acc Level 1 ---
-p1spaic <- interact_plot(
-  modelspaic,
+ggsave("model_lm_spaic_int_sex_lmer.png", 
+       plot = p_large, 
+       width = 10, 
+       height = 7, 
+       units = "in",
+       dpi = 600)
+
+plot_lm_spaip_int_lmer <- interact_plot(
+  model_lm_spaip_int_lmer, 
+  pred = spaip_s, # X - axis
+  modx = age_s, # Interaction term
+  modx.values = "mean-plus-minus", # Method of tercile subset
+  mod2 = soc,
+  plot.points = TRUE, 
+  interval = TRUE, # Confidence bands
+  main.title = "SPAICP",
+  x.label = "SPAICP",
+  y.label = "Delta ERN",
+  mod2.labels = c("Alone", "Social"),
+  legend.main = "Age"
+)
+
+p_large <- plot_lm_spaip_int_lmer + 
+  theme(
+    text = element_text(size = 16, family = "sans"),           
+    axis.title = element_text(size = 18, family = "sans"),     
+    axis.text = element_text(size = 14, family = "sans"),      
+    plot.title = element_text(size = 20, family = "sans"),     
+    legend.text = element_text(size = 14, family = "sans"),    
+    legend.title = element_text(size = 16, family = "sans")    
+  )
+
+ggsave("model_lm_spaip_int_lmer.png", 
+       plot = p_large, 
+       width = 10, 
+       height = 7, 
+       units = "in",
+       dpi = 600)
+
+# Aim #2: Social Anxiety x Social Observation x Age predicting Midfrontal Theta power model----
+model_lm_spaictheta_int_lmer <- lmer(thetapower_s ~ spaic_s * soc * age_s * sex + (1|sub), data = df_summary_long)
+summary(model_lm_spaictheta_int_lmer)
+
+model_lm_spaiptheta_int_lmer <- lmer(thetapower_s ~ sex + (1|sub), data = df_summary_long)
+summary(model_lm_spaiptheta_int_lmer)
+
+interact_plot(
+  model_lm_spaictheta_int_lmer,
   pred = spaic_s,
-  modx = soc,
-  mod2 = age_s,
-  mod2.labels = my_labels,
-  at = list(acc = 0),  # <--- ISOLATE ACC LEVEL HERE
-  #plot.points = TRUE,            # Optional: show raw data
-  #data = read_df %>% filter(acc == 0)
-) +
-  ggtitle("Error") +
-  theme_minimal()
+  modx = sex,
+  mod2 = soc,
+  plot.points = TRUE, 
+  interval = TRUE,
+  main.title = "SPAIC",
+  x.label = "SPAIC (scaled)",
+  y.label = "Power (scaled)",
+  legend.main = "Sex",
+  mod2.labels = c("Alone", "Social")
+)
 
-# --- Plot for Acc Level 2 ---
-p2spaic <- interact_plot(
-  modelspaic,
+interact_plot(
+  model_lm_spaictheta_int_lmer,
   pred = spaic_s,
-  modx = soc,
-  mod2 = age_s,
-  mod2.labels = my_labels,
-  at = list(acc = 1),  # <--- ISOLATE ACC LEVEL HERE
-  #plot.points = TRUE,
-  #data = read_df %>% filter(acc == 1)
-) +
-  ggtitle("Correct") +
-  theme_minimal()
+  modx = age_s,
+  mod2 = soc,
+  modx.values = "mean-plus-minus",
+  plot.points = TRUE, 
+  interval = TRUE,
+  main.title = "SPAIC",
+  x.label = "SPAIC (scaled)",
+  y.label = "Power (scaled)",
+  legend.main = "Age",
+  mod2.labels = c("Alone", "Social")
+)
 
-# --- Combine them ---
-# This creates a side-by-side comparison
-# p1 + p2
+## final plots
 
-combined_plot_spaic <- p1spaic + p2spaic + 
-  plot_layout(guides = "collect") # Optional: merges legends to save even more space
+# ERN
+model_lm_spaic_int_lmer <- lmer(deltaERN_s ~ spaic_s * age_s * soc * sex + (1|sub), data = df_summary_long)
+summary(model_lm_spaic_int_lmer)
 
-p1spaip <- interact_plot(
-  modelspaip,
-  pred = spaip_s,
-  modx = soc,
-  mod2 = age_s,
-  mod2.labels = my_labels,
-  at = list(acc = 0),  # <--- ISOLATE ACC LEVEL HERE
-  #plot.points = TRUE,            # Optional: show raw data
-) +
-  ggtitle("Error") +
-  theme_minimal() +
-  coord_cartesian(ylim = range(read_df$amplitude, na.rm = TRUE))
+model_lm_spaip_int_lmer <- lmer(deltaERN_s ~ age_s * spaip_s * soc + (1|sub), data = df_summary_long)
+summary(model_lm_spaip_int_lmer)
 
-# --- Plot for Acc Level 2 ---
-p2spaip <- interact_plot(
-  modelspaip,
-  pred = spaip_s,
-  modx = soc,
-  mod2 = age_s,
-  mod2.labels = my_labels,
-  at = list(acc = 1),  # <--- ISOLATE ACC LEVEL HERE
-  #plot.points = TRUE,
-) +
-  ggtitle("Correct") +
-  theme_minimal() +
-  coord_cartesian(ylim = range(read_df$amplitude, na.rm = TRUE))
-
-# --- Combine them ---
-# This creates a side-by-side comparison
-# p1 + p2
-
-combined_plot_spaip <- p1spaip + p2spaip + 
-  plot_layout(guides = "collect") # Optional: merges legends to save even more space
-
-# RCADS as predictor ----
-
-modelrcads <- lmer(amplitude ~ age_s * rcadsanxs_s * acc * soc + (1|sub), data = read_df)
-summary(modelrcads)
-
-
-## Testing new plotting method
-# 1. Define the variables for clarity
-# Replace "Level_A" and "Level_B" with your actual acc1 factor levels (e.g., 0 and 1)
-# If acc1 is numeric, choose specific values like mean +/- SD
-my_labels <- c("Low age", "Mean age", "High age")
-# --- Plot for Acc Level 1 ---
-p1spaic <- interact_plot(
-  modelspaic,
+p_age <- interact_plot(
+  model_lm_spaic_int_lmer, 
   pred = spaic_s,
-  modx = soc,
-  mod2 = age_s,
-  mod2.labels = my_labels,
-  at = list(acc = 0),  # <--- ISOLATE ACC LEVEL HERE
-  #plot.points = TRUE,            # Optional: show raw data
-  #data = read_df %>% filter(acc == 0)
-) +
-  ggtitle("Error") +
-  theme_minimal()
+  modx = age_s,
+  modx.values = "mean-plus-minus",
+  plot.points = TRUE, 
+  interval = TRUE,
+  main.title = "SPAIC",
+  x.label = "SPAIC",
+  y.label = "Delta ERN"
+)
 
-# --- Plot for Acc Level 2 ---
-p2spaic <- interact_plot(
-  modelspaic,
+p_large <- p_age + 
+  theme(
+    text = element_text(size = 16, family = "sans"),           
+    axis.title = element_text(size = 18, family = "sans"),     
+    axis.text = element_text(size = 14, family = "sans"),      
+    plot.title = element_text(size = 20, family = "sans"),     
+    legend.text = element_text(size = 14, family = "sans"),    
+    legend.title = element_text(size = 16, family = "sans")    
+  )
+
+ggsave("model_lm_deltaern_spaic_int_lmer_age.png", 
+       plot = p_large, 
+       width = 7, 
+       height = 7, 
+       units = "in",
+       dpi = 600)
+
+p_sex <- interact_plot(
+  model_lm_spaic_int_lmer, 
   pred = spaic_s,
-  modx = soc,
-  mod2 = age_s,
-  mod2.labels = my_labels,
-  at = list(acc = 1),  # <--- ISOLATE ACC LEVEL HERE
-  #plot.points = TRUE,
-  #data = read_df %>% filter(acc == 1)
-) +
-  ggtitle("Correct") +
-  theme_minimal()
+  modx = sex,
+  plot.points = TRUE, 
+  interval = TRUE,
+  vary.lty = FALSE,
+  main.title = "SPAIC",
+  x.label = "SPAIC",
+  y.label = "Delta ERN"
+)
 
-# --- Combine them ---
-# This creates a side-by-side comparison
-# p1 + p2
+p_large <- p_sex + coord_cartesian(ylim = yr) + 
+  theme(
+    text = element_text(size = 16, family = "sans"),           
+    axis.title = element_text(size = 18, family = "sans"),     
+    axis.text = element_text(size = 14, family = "sans"),      
+    plot.title = element_text(size = 20, family = "sans"),     
+    legend.text = element_text(size = 14, family = "sans"),    
+    legend.title = element_text(size = 16, family = "sans")    
+  )
 
-combined_plot_spaic <- p1spaic + p2spaic + 
-  plot_layout(guides = "collect") # Optional: merges legends to save even more space
+ggsave("model_lm_deltaern_spaic_int_lmer_sex.png", 
+       plot = p_large, 
+       width = 7, 
+       height = 7, 
+       units = "in",
+       dpi = 600)
+
+
+yr <- ggplot_build(p_age)$layout$panel_scales_y[[1]]$range$range
+
+# theta
+model_lm_spaictheta_int_lmer <- lmer(thetapower_s ~ spaic_s * soc + (1|sub), data = df_summary_long)
+summary(model_lm_spaictheta_int_lmer)
+
+model_lm_spaiptheta_int_lmer <- lmer(thetapower_s ~ spaip_s * soc + (1|sub), data = df_summary_long)
+summary(model_lm_spaiptheta_int_lmer)
+
+plot_lm_spaic_int_lmer <- interact_plot(
+  model_lm_spaictheta_int_lmer,
+  pred = spaic_s,
+  modx = sex,
+  mod2 = soc,
+  plot.points = TRUE, 
+  interval = TRUE,
+  vary.lty = FALSE,
+  main.title = "SPAIC",
+  x.label = "SPAIC (scaled)",
+  y.label = "Power (scaled)",
+  legend.main = "Sex",
+  mod2.labels = c("Alone", "Social")
+)
+
+p_large <- plot_lm_spaic_int_lmer + 
+  coord_cartesian(ylim = age_ylim) +
+  theme(
+    text = element_text(size = 16, family = "sans"),           
+    axis.title = element_text(size = 18, family = "sans"),     
+    axis.text = element_text(size = 14, family = "sans"),      
+    plot.title = element_text(size = 20, family = "sans"),     
+    legend.text = element_text(size = 14, family = "sans"),    
+    legend.title = element_text(size = 16, family = "sans")    
+  )
+
+ggsave("model_lm_spaic_int_lmer_sex.png", 
+       plot = p_large, 
+       width = 10, 
+       height = 7, 
+       units = "in",
+       dpi = 600)
+
+plot_lm_spaic_int_lmer2 <- interact_plot(
+  model_lm_spaictheta_int_lmer,
+  pred = spaic_s,
+  modx = age_s,
+  mod2 = soc,
+  modx.values = "mean-plus-minus",
+  plot.points = TRUE, 
+  interval = TRUE,
+  main.title = "SPAIC",
+  x.label = "SPAIC (scaled)",
+  y.label = "Power (scaled)",
+  legend.main = "Age",
+  mod2.labels = c("Alone", "Social")
+)
+
+p_large <- plot_lm_spaic_int_lmer2 + 
+  theme(
+    text = element_text(size = 16, family = "sans"),           
+    axis.title = element_text(size = 18, family = "sans"),     
+    axis.text = element_text(size = 14, family = "sans"),      
+    plot.title = element_text(size = 20, family = "sans"),     
+    legend.text = element_text(size = 14, family = "sans"),    
+    legend.title = element_text(size = 16, family = "sans")    
+  )
+
+ggsave("model_lm_spaic_int_lmer_age.png", 
+       plot = p_large, 
+       width = 10, 
+       height = 7, 
+       units = "in",
+       dpi = 600)
+
+
+subject_ids <- unique(df_summary_long$sub)
+write.table(subject_ids, 
+            file = "/home/data/NDClab/analyses/read-study2-alpha/derivatives/final_subjects_list.txt",
+            row.names = FALSE,
+            col.names = FALSE,
+            quote = FALSE)
+
+# EM trends ----
+## ERN model ----
+### Plot 1: First interaction - SPAIC × age----
+trends_ern_age <- emtrends(
+  model_lm_spaic_int_lmer,
+  ~ age_s,
+  var = "spaic_s",
+  at = list(age_s = c(-1, 0, 1))
+)
+summary(trends_ern_age, infer = c(TRUE, TRUE))
+pairs(trends_ern_age)
+
+### Plot 2: Second interaction - SPAIC × sex----
+trends_ern_sex <- emtrends(
+  model_lm_spaic_int_lmer,
+  ~ sex,
+  var = "spaic_s"
+)
+summary(trends_ern_sex, infer = c(TRUE, TRUE))
+pairs(trends_ern_sex)
+
+
+## Midfrontal theta model----
+### First interaction: SPAIC × sex × soc----
+trends_theta_sex <- emtrends(
+  model_lm_spaictheta_int_lmer,
+  ~ sex | soc,
+  var = "spaic_s"
+)
+summary(trends_theta_sex, infer = c(TRUE, TRUE))
+pairs(trends_theta_sex)
+
+#### Follow up tests at specific contrasts----
+trends_theta_by_sex <- emtrends(
+  model_lm_spaictheta_int_lmer,
+  ~ soc | sex,
+  var = "spaic_s"
+)
+summary(trends_theta_by_sex, infer = c(TRUE, TRUE))
+pairs(trends_theta_by_sex)
+
+trends_theta_by_soc <- emtrends(
+  model_lm_spaictheta_int_lmer,
+  ~ sex | soc,
+  var = "spaic_s"
+)
+summary(trends_theta_by_soc, infer = c(TRUE, TRUE))
+pairs(trends_theta_by_soc)
+
+### Second interaction: SPAIC × age × soc----
+trends_theta_age <- emtrends(
+  model_lm_spaictheta_int_lmer,
+  ~ age_s | soc,
+  var = "spaic_s",
+  at = list(age_s = c(-1, 0, 1))
+)
+summary(trends_theta_age, infer = c(TRUE, TRUE))
+pairs(trends_theta_age)
+
+#### Follow up contrasts for specific contrasts----
+trends_theta_older <- emtrends(
+  model_lm_spaictheta_int_lmer,
+  ~ soc,
+  var = "spaic_s",
+  at = list(age_s = 1)
+)
+summary(trends_theta_older, infer = c(TRUE, TRUE))
+pairs(trends_theta_older)
+
+trends_theta_avg <- emtrends(
+  model_lm_spaictheta_int_lmer,
+  ~ soc,
+  var = "spaic_s",
+  at = list(age_s = 0)
+)
+summary(trends_theta_avg, infer = c(TRUE, TRUE))
+pairs(trends_theta_avg)
+
+trends_theta_young <- emtrends(
+  model_lm_spaictheta_int_lmer,
+  ~ soc,
+  var = "spaic_s",
+  at = list(age_s = -1)
+)
+summary(trends_theta_young, infer = c(TRUE, TRUE))
+pairs(trends_theta_young)
+
+trends_theta_social <- emtrends(
+  model_lm_spaictheta_int_lmer,
+  ~ age_s,
+  var = "spaic_s",
+  at = list(age_s = c(-1, 1), soc = "social")
+)
+summary(trends_theta_social, infer = c(TRUE, TRUE))
+pairs(trends_theta_social)
+
+trends_theta_males <- emtrends(
+  model_lm_spaictheta_int_lmer,
+  ~ age_s,
+  var = "spaic_s",
+  at = list(age_s = c(-1, 1), soc = "social")
+)
+summary(trends_theta_social, infer = c(TRUE, TRUE))
+pairs(trends_theta_social)
