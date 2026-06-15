@@ -17,6 +17,7 @@ addpath(genpath('/home/data/NDClab/tools/lab-devOps/scripts/MADE_pipeline_standa
 %Location of "EEG
 % addpath(genpath([main_dir filesep 'eeglab13_4_4b']));% enter the path of the EEGLAB folder in this line
 addpath(genpath('/home/data/NDClab/tools/lab-devOps/scripts/MADE_pipeline_standard/eeglab13_4_4b'));% enter the path of the EEGLAB folder in this line
+addpath('/home/data/NDClab/analyses/read-study2-alpha/code/postprocessing/eeg/woodyfilter');
 
 %remove path to octave functions inside matlab to prevent errors when
 % rmpath([main_dir filesep 'eeglab13_4_4b' filesep 'functions' filesep 'octavefunc' filesep 'signal'])
@@ -37,7 +38,7 @@ summary_csv_path = '/home/data/NDClab/analyses/read-study2-alpha/derivatives/beh
 data_location = [dataset_dir filesep 'derivatives' filesep 'preprocessed'];
 
 % 2. Enter the path of the folder where you want to save the postprocessing outputs
-output_location = [analysis_dir filesep 'derivatives'];
+output_location = [analysis_dir filesep 'derivatives' filesep 'erp'];
 
 % %specify parameters of data to process
 
@@ -118,6 +119,14 @@ for subject=1:length(datafile_names)
 end
 
 %% pull resp-locked erp mat file
+% --- Adaptive Woody (latency-jitter) correction ---
+woody_on       = true;
+woody_chans    = [1 2 33 34];
+woody_alignWin = [0 300]; % template-matching window (ms), per Gavin et al.
+woody_maxShift = 300;
+woody_meanR_pre  = [];
+woody_meanR_post = [];
+woody_sdShift_ms = [];
 
 %read in behavioral data for participants
 behavior_info = readtable(summary_csv_path);
@@ -228,10 +237,20 @@ for subject = 1:length(datafile_names)
         EEG1 = pop_selectevent( EEG, 'latency', '-1<=1', 'observation', observation, 'eventType', eventType, 'congruency', congruency, 'accuracy', accuracy, 'responded', responded, 'validRt', validRt, 'extraResponse', extraResponse, 'deleteevents', 'on', 'deleteepochs', 'on', 'invertepochs', 'off');
         EEG1 = eeg_checkset(EEG1);
 
-        % Average across epoch dimension
-        % this all Channel ERP only needs to be computed once
-        % per condition
-        meanEpochs = mean(EEG1.data, 3);
+        % Latency-adjusted average (single-iteration Adaptive Woody filter,
+        % cluster-driven single shift applied to all channels per trial)
+        if woody_on
+            [meanEpochs, wd] = woody_align(EEG1.data, EEG.times, ...
+                woody_chans, woody_alignWin, woody_maxShift);
+            woody_meanR_pre(pIdx, c)  = wd.meanR_pre;
+            woody_meanR_post(pIdx, c) = wd.meanR_post;
+            woody_sdShift_ms(pIdx, c) = wd.sdShift_ms;
+        else
+            meanEpochs = mean(EEG1.data, 3);
+        end
+
+        %store data for this condition in array
+        erpDat_data(pIdx,c,:,:) = meanEpochs;
 
         %store data for this condition in array
         erpDat_data(pIdx,c,:,:)= meanEpochs;
@@ -250,4 +269,6 @@ for subject = 1:length(datafile_names)
 end
 
 %save the erps and subject list
-save(sprintf('read_flanker_Resp_erps_min_6t_%s.mat', datestr(now, 'mm_dd_yyyy_HH_MM_SS')), 'erpDat_data', 'erpDat_subIds')
+save(sprintf('read_flanker_woody_corrected_Resp_erps_min_6t_%s.mat', datestr(now, 'mm_dd_yyyy_HH_MM_SS')), ...
+    'erpDat_data', 'erpDat_subIds', ...
+    'woody_meanR_pre', 'woody_meanR_post', 'woody_sdShift_ms')

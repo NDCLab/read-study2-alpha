@@ -1,0 +1,1885 @@
+WARNING: $PATH does not agree with $PATH_modshare counter. The following directories' usage counters were adjusted to match. Note that this may mean that module unloading may not work correctly.
+ /home/share/bin/ /bin/
+/home/data/NDClab/analyses/read-study2-alpha/code/postprocessing/eeg/woodyfilter
+n123.panther.net
+Fri Jun  5 14:36:46 EDT 2026
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2021 The MathWorks, Inc.
+                  R2021b (9.11.0.1769968) 64-bit (glnxa64)
+                             September 17, 2021
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+
+*** Processing subject 1 (sub-3300002_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300002/s1_r1/eeg/sub-3300002_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300002/s1_r1/eeg/sub-3300002_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 2 (sub-3300003_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300003/s1_r1/eeg/sub-3300003_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300003/s1_r1/eeg/sub-3300003_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 3 (sub-3300006_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300006/s1_r1/eeg/sub-3300006_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300006/s1_r1/eeg/sub-3300006_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 4 (sub-3300008_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300008/s1_r1/eeg/sub-3300008_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300008/s1_r1/eeg/sub-3300008_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 5 (sub-3300009_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300009/s1_r1/eeg/sub-3300009_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300009/s1_r1/eeg/sub-3300009_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 6 (sub-3300010_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300010/s1_r1/eeg/sub-3300010_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300010/s1_r1/eeg/sub-3300010_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 7 (sub-3300013_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300013/s1_r1/eeg/sub-3300013_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300013/s1_r1/eeg/sub-3300013_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 8 (sub-3300014_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300014/s1_r1/eeg/sub-3300014_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300014/s1_r1/eeg/sub-3300014_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 9 (sub-3300015_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300015/s1_r1/eeg/sub-3300015_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300015/s1_r1/eeg/sub-3300015_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 10 (sub-3300016_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300016/s1_r1/eeg/sub-3300016_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300016/s1_r1/eeg/sub-3300016_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 11 (sub-3300017_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300017/s1_r1/eeg/sub-3300017_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300017/s1_r1/eeg/sub-3300017_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 12 (sub-3300018_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300018/s1_r1/eeg/sub-3300018_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300018/s1_r1/eeg/sub-3300018_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 13 (sub-3300019_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300019/s1_r1/eeg/sub-3300019_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300019/s1_r1/eeg/sub-3300019_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 14 (sub-3300024_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300024/s1_r1/eeg/sub-3300024_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300024/s1_r1/eeg/sub-3300024_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 15 (sub-3300025_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300025/s1_r1/eeg/sub-3300025_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300025/s1_r1/eeg/sub-3300025_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 16 (sub-3300026_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300026/s1_r1/eeg/sub-3300026_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300026/s1_r1/eeg/sub-3300026_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 17 (sub-3300027_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300027/s1_r1/eeg/sub-3300027_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300027/s1_r1/eeg/sub-3300027_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 18 (sub-3300028_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300028/s1_r1/eeg/sub-3300028_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300028/s1_r1/eeg/sub-3300028_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 19 (sub-3300030_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300030/s1_r1/eeg/sub-3300030_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300030/s1_r1/eeg/sub-3300030_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 20 (sub-3300032_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300032/s1_r1/eeg/sub-3300032_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300032/s1_r1/eeg/sub-3300032_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 21 (sub-3300034_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300034/s1_r1/eeg/sub-3300034_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300034/s1_r1/eeg/sub-3300034_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 22 (sub-3300035_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300035/s1_r1/eeg/sub-3300035_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300035/s1_r1/eeg/sub-3300035_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 23 (sub-3300037_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300037/s1_r1/eeg/sub-3300037_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300037/s1_r1/eeg/sub-3300037_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 24 (sub-3300038_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300038/s1_r1/eeg/sub-3300038_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300038/s1_r1/eeg/sub-3300038_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 25 (sub-3300041_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300041/s1_r1/eeg/sub-3300041_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300041/s1_r1/eeg/sub-3300041_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 26 (sub-3300043_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300043/s1_r1/eeg/sub-3300043_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300043/s1_r1/eeg/sub-3300043_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 27 (sub-3300044_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300044/s1_r1/eeg/sub-3300044_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300044/s1_r1/eeg/sub-3300044_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 28 (sub-3300046_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300046/s1_r1/eeg/sub-3300046_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300046/s1_r1/eeg/sub-3300046_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 29 (sub-3300047_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300047/s1_r1/eeg/sub-3300047_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300047/s1_r1/eeg/sub-3300047_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 30 (sub-3300048_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300048/s1_r1/eeg/sub-3300048_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300048/s1_r1/eeg/sub-3300048_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 31 (sub-3300050_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300050/s1_r1/eeg/sub-3300050_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300050/s1_r1/eeg/sub-3300050_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 32 (sub-3300051_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300051/s1_r1/eeg/sub-3300051_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300051/s1_r1/eeg/sub-3300051_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 33 (sub-3300052_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300052/s1_r1/eeg/sub-3300052_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300052/s1_r1/eeg/sub-3300052_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 34 (sub-3300053_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300053/s1_r1/eeg/sub-3300053_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300053/s1_r1/eeg/sub-3300053_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 35 (sub-3300054_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300054/s1_r1/eeg/sub-3300054_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300054/s1_r1/eeg/sub-3300054_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 36 (sub-3300056_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300056/s1_r1/eeg/sub-3300056_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300056/s1_r1/eeg/sub-3300056_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 37 (sub-3300057_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300057/s1_r1/eeg/sub-3300057_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300057/s1_r1/eeg/sub-3300057_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 38 (sub-3300058_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300058/s1_r1/eeg/sub-3300058_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300058/s1_r1/eeg/sub-3300058_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 39 (sub-3300059_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300059/s1_r1/eeg/sub-3300059_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300059/s1_r1/eeg/sub-3300059_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 40 (sub-3300060_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300060/s1_r1/eeg/sub-3300060_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300060/s1_r1/eeg/sub-3300060_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 41 (sub-3300062_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300062/s1_r1/eeg/sub-3300062_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300062/s1_r1/eeg/sub-3300062_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 42 (sub-3300063_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300063/s1_r1/eeg/sub-3300063_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300063/s1_r1/eeg/sub-3300063_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 43 (sub-3300064_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300064/s1_r1/eeg/sub-3300064_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300064/s1_r1/eeg/sub-3300064_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 44 (sub-3300066_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300066/s1_r1/eeg/sub-3300066_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300066/s1_r1/eeg/sub-3300066_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 45 (sub-3300067_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300067/s1_r1/eeg/sub-3300067_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300067/s1_r1/eeg/sub-3300067_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 46 (sub-3300068_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300068/s1_r1/eeg/sub-3300068_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300068/s1_r1/eeg/sub-3300068_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 47 (sub-3300069_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300069/s1_r1/eeg/sub-3300069_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300069/s1_r1/eeg/sub-3300069_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 48 (sub-3300070_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300070/s1_r1/eeg/sub-3300070_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300070/s1_r1/eeg/sub-3300070_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 49 (sub-3300071_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300071/s1_r1/eeg/sub-3300071_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300071/s1_r1/eeg/sub-3300071_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 50 (sub-3300072_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300072/s1_r1/eeg/sub-3300072_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300072/s1_r1/eeg/sub-3300072_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 51 (sub-3300073_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300073/s1_r1/eeg/sub-3300073_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300073/s1_r1/eeg/sub-3300073_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 52 (sub-3300074_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300074/s1_r1/eeg/sub-3300074_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300074/s1_r1/eeg/sub-3300074_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 53 (sub-3300076_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300076/s1_r1/eeg/sub-3300076_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300076/s1_r1/eeg/sub-3300076_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 54 (sub-3300077_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300077/s1_r1/eeg/sub-3300077_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300077/s1_r1/eeg/sub-3300077_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 55 (sub-3300078_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300078/s1_r1/eeg/sub-3300078_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300078/s1_r1/eeg/sub-3300078_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 56 (sub-3300079_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300079/s1_r1/eeg/sub-3300079_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300079/s1_r1/eeg/sub-3300079_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 57 (sub-3300081_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300081/s1_r1/eeg/sub-3300081_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300081/s1_r1/eeg/sub-3300081_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 58 (sub-3300082_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300082/s1_r1/eeg/sub-3300082_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300082/s1_r1/eeg/sub-3300082_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 59 (sub-3300083_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300083/s1_r1/eeg/sub-3300083_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300083/s1_r1/eeg/sub-3300083_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 60 (sub-3300084_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300084/s1_r1/eeg/sub-3300084_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300084/s1_r1/eeg/sub-3300084_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 61 (sub-3300088_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300088/s1_r1/eeg/sub-3300088_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300088/s1_r1/eeg/sub-3300088_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 62 (sub-3300089_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300089/s1_r1/eeg/sub-3300089_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300089/s1_r1/eeg/sub-3300089_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 63 (sub-3300091_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300091/s1_r1/eeg/sub-3300091_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300091/s1_r1/eeg/sub-3300091_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 64 (sub-3300092_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300092/s1_r1/eeg/sub-3300092_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300092/s1_r1/eeg/sub-3300092_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 65 (sub-3300093_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300093/s1_r1/eeg/sub-3300093_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300093/s1_r1/eeg/sub-3300093_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 66 (sub-3300099_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300099/s1_r1/eeg/sub-3300099_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300099/s1_r1/eeg/sub-3300099_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 67 (sub-3300101_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300101/s1_r1/eeg/sub-3300101_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300101/s1_r1/eeg/sub-3300101_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 68 (sub-3300102_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300102/s1_r1/eeg/sub-3300102_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300102/s1_r1/eeg/sub-3300102_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 69 (sub-3300103_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300103/s1_r1/eeg/sub-3300103_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300103/s1_r1/eeg/sub-3300103_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 70 (sub-3300106_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300106/s1_r1/eeg/sub-3300106_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300106/s1_r1/eeg/sub-3300106_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 71 (sub-3300107_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300107/s1_r1/eeg/sub-3300107_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300107/s1_r1/eeg/sub-3300107_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 72 (sub-3300110_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300110/s1_r1/eeg/sub-3300110_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300110/s1_r1/eeg/sub-3300110_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 73 (sub-3300112_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300112/s1_r1/eeg/sub-3300112_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300112/s1_r1/eeg/sub-3300112_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 74 (sub-3300114_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300114/s1_r1/eeg/sub-3300114_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300114/s1_r1/eeg/sub-3300114_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 75 (sub-3300115_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300115/s1_r1/eeg/sub-3300115_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300115/s1_r1/eeg/sub-3300115_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 76 (sub-3300116_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300116/s1_r1/eeg/sub-3300116_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300116/s1_r1/eeg/sub-3300116_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 77 (sub-3300118_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300118/s1_r1/eeg/sub-3300118_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300118/s1_r1/eeg/sub-3300118_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 78 (sub-3300119_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300119/s1_r1/eeg/sub-3300119_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300119/s1_r1/eeg/sub-3300119_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 79 (sub-3300120_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300120/s1_r1/eeg/sub-3300120_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300120/s1_r1/eeg/sub-3300120_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 80 (sub-3300121_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300121/s1_r1/eeg/sub-3300121_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300121/s1_r1/eeg/sub-3300121_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 81 (sub-3300122_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300122/s1_r1/eeg/sub-3300122_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300122/s1_r1/eeg/sub-3300122_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 82 (sub-3300123_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300123/s1_r1/eeg/sub-3300123_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300123/s1_r1/eeg/sub-3300123_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 83 (sub-3300124_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300124/s1_r1/eeg/sub-3300124_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300124/s1_r1/eeg/sub-3300124_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 84 (sub-3300125_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300125/s1_r1/eeg/sub-3300125_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300125/s1_r1/eeg/sub-3300125_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 85 (sub-3300126_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300126/s1_r1/eeg/sub-3300126_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300126/s1_r1/eeg/sub-3300126_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 86 (sub-3300127_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300127/s1_r1/eeg/sub-3300127_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300127/s1_r1/eeg/sub-3300127_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 87 (sub-3300128_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300128/s1_r1/eeg/sub-3300128_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300128/s1_r1/eeg/sub-3300128_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 88 (sub-3300129_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300129/s1_r1/eeg/sub-3300129_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300129/s1_r1/eeg/sub-3300129_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 89 (sub-3300131_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300131/s1_r1/eeg/sub-3300131_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300131/s1_r1/eeg/sub-3300131_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 90 (sub-3300132_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300132/s1_r1/eeg/sub-3300132_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300132/s1_r1/eeg/sub-3300132_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 91 (sub-3300133_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300133/s1_r1/eeg/sub-3300133_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300133/s1_r1/eeg/sub-3300133_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 92 (sub-3300134_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300134/s1_r1/eeg/sub-3300134_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300134/s1_r1/eeg/sub-3300134_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 93 (sub-3300135_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300135/s1_r1/eeg/sub-3300135_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300135/s1_r1/eeg/sub-3300135_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 94 (sub-3300136_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300136/s1_r1/eeg/sub-3300136_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300136/s1_r1/eeg/sub-3300136_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 95 (sub-3300138_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300138/s1_r1/eeg/sub-3300138_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300138/s1_r1/eeg/sub-3300138_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 96 (sub-3300139_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300139/s1_r1/eeg/sub-3300139_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300139/s1_r1/eeg/sub-3300139_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 97 (sub-3300140_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300140/s1_r1/eeg/sub-3300140_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300140/s1_r1/eeg/sub-3300140_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 98 (sub-3300141_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300141/s1_r1/eeg/sub-3300141_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300141/s1_r1/eeg/sub-3300141_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 99 (sub-3300142_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300142/s1_r1/eeg/sub-3300142_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300142/s1_r1/eeg/sub-3300142_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 100 (sub-3300143_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300143/s1_r1/eeg/sub-3300143_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300143/s1_r1/eeg/sub-3300143_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 101 (sub-3300147_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300147/s1_r1/eeg/sub-3300147_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300147/s1_r1/eeg/sub-3300147_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+
+
+
+*** Processing subject 102 (sub-3300148_all_eeg_processed_data_s1_r1_e1.set) ***
+
+
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300148/s1_r1/eeg/sub-3300148_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300148/s1_r1/eeg/sub-3300148_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+[Warning: Column headers from the file were modified to make them valid MATLAB
+identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as
+table variable names.] 
+pop_loadset(): loading file /home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300002/s1_r1/eeg/sub-3300002_all_eeg_processed_data_s1_r1_e1.set ...
+Reading float file '/home/data/NDClab/datasets/read-study2-dataset/derivatives/preprocessed/sub-3300002/s1_r1/eeg/sub-3300002_all_eeg_processed_data_s1_r1_e1.fdt'...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+Event resorted by increasing latencies.
+Removing 1492 trial(s)...
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'bvtime'
+              filling with values of other events in the same epochs
+eeg_checkset: found empty values for field 'visible'
+              filling with values of other events in the same epochs
+{Undefined function 'woody_align' for input arguments of type 'single'.
+
+Error in create_mat_s1 (line 242)
+            [meanEpochs, wd] = woody_align(EEG1.data, EEG.times, ...
+
+Error in run (line 91)
+evalin('caller', strcat(script, ';'));
+} 

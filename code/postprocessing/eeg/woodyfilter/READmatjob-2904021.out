@@ -1,0 +1,23 @@
+WARNING: $PATH does not agree with $PATH_modshare counter. The following directories' usage counters were adjusted to match. Note that this may mean that module unloading may not work correctly.
+ /home/share/bin/ /bin/
+/home/data/NDClab/analyses/read-study2-alpha/code/postprocessing/eeg/woodyfilter
+n123.panther.net
+Fri Jun  5 14:35:23 EDT 2026
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2021 The MathWorks, Inc.
+                  R2021b (9.11.0.1769968) 64-bit (glnxa64)
+                             September 17, 2021
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+{Unrecognized function or variable 'filsep'.
+
+Error in create_mat_s1 (line 40)
+output_location = [analysis_dir filesep 'derivatives' filsep 'erp'];
+
+Error in run (line 91)
+evalin('caller', strcat(script, ';'));
+} 

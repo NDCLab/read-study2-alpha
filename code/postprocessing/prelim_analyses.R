@@ -12,24 +12,46 @@ library(patchwork)
 
 # Initialize directory folders and load data----
 derivatives_dir <- "/home/data/NDClab/analyses/read-study2-alpha/derivatives/csv/s1_r1"
-read_df <- read_csv(file.path(derivatives_dir, "read_long_s1_r1_14_04_2026_13_45_42.csv"))
-
-#enter participants that failed deception check (i.e. they answered "very much" to did you believe that no one was watching you at all?)
-#failed_deception <- c("3300118", "3300026", "3300071", "3300131", "3300123", "3300067", "3300052", "3300013")
+read_df <- read_csv(file.path(derivatives_dir, "read_long_s1_r1_05_06_2026_17_28_50.csv"))
+read_df_wide <- read_csv(file.path(derivatives_dir, "read_wide_s1_r1_02_06_2026_11_18_10.csv"))
 
 #read_df <- read_df |> filter(!(sub %in% failed_deception))
+
+# participant removal based on RA tracker
+participants_invalid = c(3300025, 3300118, 3300010)
+participants_social_invalid = c(3300027, 3300084, 3300041)
+
+# Remove invalid participants entirely
+read_df <- read_df |>
+  filter(!(sub %in% participants_invalid))
+
+read_df <- read_df |>
+  filter(!(sub %in% participants_social_invalid & soc == 1))
 
 # Prepare data----
 ## Aggregate variables of interest----
 df_summary_long <- read_df |>
   group_by(sub, soc) |>
   summarise(
-    deltaERN = first(ERN_min_CRN),
+    deltaERN = amplitude[acc == 0] - amplitude[acc == 1],
     thetapower = first(power_early_diff),
     spaic = first(spaic_scrdTotal_s1_r1_e1),
     age = first(age_m),
     spaip = first(spaip_scrdTotal_s1_r1_e1),
     sex = first(sex),
+    ITPS = first(ITPS_early_diff),
+    d1 = first(postdb_i1_s1_r1_e1),
+    d2 = first(postdb_i2_s1_r1_e1),
+    d3 = first(postdb_i3_s1_r1_e1),
+    first_soc = first(first_soc),
+    #acc = first(accuracy_score),
+    #acc_incon = first(acc_incon),
+    #acc_con = first(acc_con),
+    #rt = first(rt),
+    #rt_con = first(rt_con),
+    #rt_incon = first(rt_incon),
+    #pes = first(pes),
+    .groups = "drop"
     #acc_score = first(accuracy_score),
     #invalid_rt_percent = first(invalid_rt_percent),
     #rt = first(rt),
@@ -77,10 +99,17 @@ df_summary_long <- read_df |>
 
 ## Remove any data that is not recorded in both conditions
 df_summary_long <- na.omit(df_summary_long) #note: data was compiled to assign NA to any variable that is +3 or -3 sd from mean as identifying outliers early
+#df_summary_long <- df_summary_long |>
+  #group_by(sub) |>
+  #filter(n() == 2) |>
+  #ungroup()
+
+## Exclude participants that didn't believe anyone was watching them
 df_summary_long <- df_summary_long |>
-  group_by(sub) |>
-  filter(n() == 2) |>
-  ungroup()
+  filter(!(d3 %in% c(4) & soc == 1))
+
+df_summary_long <- df_summary_long |>
+  filter(!(d3 %in% c(3) & soc == 1))
 
 ## Scaling variables----
 df_summary_long$age_s <- scale(df_summary_long$age)
@@ -88,6 +117,14 @@ df_summary_long$spaic_s <- scale(df_summary_long$spaic)
 df_summary_long$spaip_s <- scale(df_summary_long$spaip)
 df_summary_long$deltaERN_s <- scale(df_summary_long$deltaERN)
 df_summary_long$thetapower_s <- scale(df_summary_long$thetapower)
+df_summary_long$ITPS_s <- scale(df_summary_long$ITPS)
+#df_summary_long$acc_s <- scale(df_summary_long$acc)
+#df_summary_long$acc_con_s <- scale (df_summary_long$acc_con)
+#df_summary_long$acc_incon_s <- scale (df_summary_long$acc_incon)
+#df_summary_long$rt_s <- scale (df_summary_long$rt)
+#df_summary_long$rt_con_s <- scale (df_summary_long$rt_con)
+#df_summary_long$rt_incon_s <- scale (df_summary_long$rt_incon)
+#df_summary_long$pes_s <- scale (df_summary_long$pes)
 
 ## Apply sum contrasts ----
 df_summary_long$soc <- factor(df_summary_long$soc, 
@@ -101,12 +138,21 @@ df_summary_long$sex <- factor(df_summary_long$sex,
 contrasts(df_summary_long$soc) <- rev(contr.sum(2))
 contrasts(df_summary_long$sex) <- rev(contr.sum(2))
 
+# Create wide for descriptive stats that has the included subjects from the criteria done above
+df_summary_wide <- df_summary_long |>
+  pivot_wider(
+    id_cols     = c(sub, age, spaic, spaip, sex, d1, d2, d3,
+                    age_s, spaic_s, spaip_s),
+    names_from  = soc,
+    values_from = c(deltaERN, thetapower, deltaERN_s, thetapower_s)
+  )
+
 # Aim #1: Social Anxiety x Social Observation x Age predicting ERN model----
 ### Mixed effect modeling---- 
-model_lm_spaic_int_lmer <- lmer(deltaERN_s ~ spaic_s * age_s * soc * sex + (1|sub), data = df_summary_long)
+model_lm_spaic_int_lmer <- lmer(deltaERN_s ~ spaic_s * soc + age_s + sex + (1|sub), data = df_summary_long)
 summary(model_lm_spaic_int_lmer)
 
-model_lm_spaip_int_lmer <- lmer(deltaERN_s ~ age_s * spaip_s * soc * sex + (1|sub), data = df_summary_long)
+model_lm_spaip_int_lmer <- lmer(deltaERN_s ~ spaip_s * soc + age_s + sex + (1|sub), data = df_summary_long)
 summary(model_lm_spaip_int_lmer)
 
 #### Interaction plots----
@@ -180,17 +226,15 @@ ggsave("model_lm_spaic_int_sex_lmer.png",
 
 plot_lm_spaip_int_lmer <- interact_plot(
   model_lm_spaip_int_lmer, 
-  pred = spaip_s, # X - axis
-  modx = age_s, # Interaction term
-  modx.values = "mean-plus-minus", # Method of tercile subset
-  mod2 = soc,
+  pred = spaip_s,
+  modx = soc,
+  modx.labels = c("Alone", "Social"),
   plot.points = TRUE, 
-  interval = TRUE, # Confidence bands
+  interval = TRUE,
   main.title = "SPAICP",
   x.label = "SPAICP",
   y.label = "Delta ERN",
-  mod2.labels = c("Alone", "Social"),
-  legend.main = "Age"
+  legend.main = "Condition"
 )
 
 p_large <- plot_lm_spaip_int_lmer + 
@@ -211,10 +255,10 @@ ggsave("model_lm_spaip_int_lmer.png",
        dpi = 600)
 
 # Aim #2: Social Anxiety x Social Observation x Age predicting Midfrontal Theta power model----
-model_lm_spaictheta_int_lmer <- lmer(thetapower_s ~ spaic_s * soc * age_s * sex + (1|sub), data = df_summary_long)
+model_lm_spaictheta_int_lmer <- lmer(thetapower_s ~ spaic_s * soc + sex + (1|sub), data = df_summary_long)
 summary(model_lm_spaictheta_int_lmer)
 
-model_lm_spaiptheta_int_lmer <- lmer(thetapower_s ~ sex + (1|sub), data = df_summary_long)
+model_lm_spaiptheta_int_lmer <- lmer(thetapower_s ~ spaip_s * soc + sex + (1|sub), data = df_summary_long)
 summary(model_lm_spaiptheta_int_lmer)
 
 interact_plot(
@@ -245,6 +289,20 @@ interact_plot(
   legend.main = "Age",
   mod2.labels = c("Alone", "Social")
 )
+
+# Supplemental Statistics: Social Anxiety x Social Observation x Age predicting ITPS power model----
+model_lm_spaicitps_int_lmer <- lmer(ITPS_s ~ spaic_s * soc + age_s + (1|sub), data = df_summary_long)
+summary(model_lm_spaicitps_int_lmer)
+
+model_lm_spaipitps_int_lmer <- lmer(ITPS_s ~ spaip_s * soc + age_s + (1|sub), data = df_summary_long)
+summary(model_lm_spaipitps_int_lmer)
+
+# Behavior----
+model_lm_spaip_acc_int_lmer <- lmer(acc_s ~ spaip_s * soc + age_s + (1|sub), data = df_summary_long)
+summary(model_lm_spaip_acc_int_lmer)
+
+model_lm_spaic_acc_int_lmer <- lmer(acc_s ~ spaic_s * soc + age_s + (1|sub), data = df_summary_long)
+summary(model_lm_spaic_acc_int_lmer)
 
 ## final plots
 
@@ -317,10 +375,10 @@ ggsave("model_lm_deltaern_spaic_int_lmer_sex.png",
 yr <- ggplot_build(p_age)$layout$panel_scales_y[[1]]$range$range
 
 # theta
-model_lm_spaictheta_int_lmer <- lmer(thetapower_s ~ spaic_s * soc + (1|sub), data = df_summary_long)
+model_lm_spaictheta_int_lmer <- lmer(thetapower_s ~ spaip_s * soc * age_s + sex + (1|sub), data = df_summary_long)
 summary(model_lm_spaictheta_int_lmer)
 
-model_lm_spaiptheta_int_lmer <- lmer(thetapower_s ~ spaip_s * soc + (1|sub), data = df_summary_long)
+model_lm_spaiptheta_int_lmer <- lmer(thetapower_s ~ spaic_s * soc * age_s + sex + (1|sub), data = df_summary_long)
 summary(model_lm_spaiptheta_int_lmer)
 
 plot_lm_spaic_int_lmer <- interact_plot(
@@ -389,20 +447,21 @@ ggsave("model_lm_spaic_int_lmer_age.png",
        dpi = 600)
 
 
-subject_ids <- unique(df_summary_long$sub)
-write.table(subject_ids, 
-            file = "/home/data/NDClab/analyses/read-study2-alpha/derivatives/final_subjects_list.txt",
-            row.names = FALSE,
-            col.names = FALSE,
-            quote = FALSE)
+keep_pairs <- df_summary_long |>
+  distinct(sub, soc) |>
+  arrange(sub, soc)
+
+readr::write_csv(
+  keep_pairs,
+  "/home/data/NDClab/analyses/read-study2-alpha/derivatives/060326_subjects_by_cond.csv"
+)
 
 # EM trends ----
 ## ERN model ----
 ### Plot 1: First interaction - SPAIC × age----
 trends_ern_age <- emtrends(
-  model_lm_spaic_int_lmer,
-  ~ age_s,
-  var = "spaic_s",
+  model_lm_spaip_int_lmer,
+  var = "spaip_s",
   at = list(age_s = c(-1, 0, 1))
 )
 summary(trends_ern_age, infer = c(TRUE, TRUE))

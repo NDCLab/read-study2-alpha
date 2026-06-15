@@ -195,7 +195,6 @@ for t = all_stimMarkers_eventNums %t = event numbers stored in all_stimMarkers_e
 
             %if there was a response, then look if there was at least one
             %extra response after the first response
-            % fix "Index exceeds the number of array elements."
             if t+2 <= total_eventNums
                 switch EEG.event(t+2).type
                     case extra_RespMarkers %if at least one extra response
@@ -305,7 +304,6 @@ for t = all_stimMarkers_eventNums %t = event numbers stored in all_stimMarkers_e
 
                         %if there was a response, then look if there was at least one
                         %extra response after the first response
-                        % fix "Index exceeds the number of array elements."
                         if nextStimEventNum+2 <= total_eventNums
                             switch EEG.event(nextStimEventNum+2).type
                                 case extra_RespMarkers %if at least one extra response
@@ -403,13 +401,16 @@ for t = all_stimMarkers_eventNums %t = event numbers stored in all_stimMarkers_e
 
                         %if there was a response, then look if there was at least one
                         %extra response after the first response
-                        switch EEG.event(prevStimEventNum+2).type
-                            case extra_RespMarkers %if at least one extra response
-                                prevExtraResponse = 1;
-                            otherwise %if NO response
-                                prevExtraResponse = 0;
+                        if prevStimEventNum+2 <= total_eventNums
+                            switch EEG.event(prevStimEventNum+2).type
+                                case extra_RespMarkers %if at least one extra response
+                                    prevExtraResponse = 1;
+                                otherwise %if NO response
+                                    prevExtraResponse = 0;
+                            end
+                        else
+                            prevExtraResponse = 0;
                         end
-
                         %deterimine if a valid trial or not (single, valid rt response)
                         if prevResponded == 1 && prevValidRt == 1 && prevExtraResponse == 0
                             prevValidTrial = 1;
