@@ -1,6 +1,6 @@
 %
 % Modified on 2024/04/11 to process thrive dataset flanker data
-%
+% Further modified to process READ flanker data
 % This script was created by George Buzzell for the NDC Lab EEG Training
 % Workshop on 02/22. This script uses parts of the "set up" structure from
 % the MADE preprocessing pipeline (Debnath, Buzzell, et. al., 2020)
