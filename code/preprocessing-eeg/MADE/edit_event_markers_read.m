@@ -278,7 +278,12 @@ for t = all_stimMarkers_eventNums %t = event numbers stored in all_stimMarkers_e
 
                 %figure out if a response was made on the NEXT TRIAL. if so, identify event # of
                 %response marker, rt, rt validity, accuracy, presence of extra responses.
-                switch EEG.event(nextStimEventNum+1).type
+                if nextStimEventNum+1 > total_eventNums
+                    nextEventType = 'NONE';
+                else
+                    nextEventType = EEG.event(nextStimEventNum+1).type;
+                end
+                switch nextEventType
 
                     case first_RespMarkers %if there was a response
                         nextResponded = 1;
@@ -375,7 +380,12 @@ for t = all_stimMarkers_eventNums %t = event numbers stored in all_stimMarkers_e
 
                 %figure out if a response was made on the PREVIOUS TRIAL. if so, identify event # of
                 %response marker, rt, rt validity, accuracy, presence of extra responses.
-                switch EEG.event(prevStimEventNum+1).type
+                if prevStimEventNum+1 > total_eventNums
+                    prevEventType = 'NONE';
+                else
+                    prevEventType = EEG.event(prevStimEventNum+1).type;
+                end
+                switch prevEventType
 
                     case first_RespMarkers %if there was a response
                         prevResponded = 1;
