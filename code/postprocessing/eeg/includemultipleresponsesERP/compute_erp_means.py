@@ -37,7 +37,7 @@ timeCell = [
 if laplacian:
     path_to_mat = glob(f"{analysis_path}/derivatives/preprocessed/erp_check/{session}/read_Resp_erps_csd_min_6t_*2025*.mat")[0]
 else:
-    path_to_mat = glob(f"{analysis_path}/derivatives/erp/read_flanker_Resp_erps_min_6t_06_18_2026_14_29_42.mat")[0] #latest file; computed on "checked" data, includes 111 and 109
+    path_to_mat = glob(f"{analysis_path}/derivatives/read_flanker_Resp_erps_min_6t_03_03_2026_19_24_33.mat")[0] #latest file; computed on "checked" data
     #path_to_mat = glob(f"{analysis_path}/derivatives/preprocessed/erp_check/{session}/read_Resp_erps_min_6t_02_11_2025_15_17_33.mat")[0]
 
 path_to_eeg = glob(f"{dataset_path}/derivatives/preprocessed/sub-3300002/{session}/eeg/sub-3300002_all_eeg_processed_data_{session}_e1.set")[0]
@@ -111,9 +111,7 @@ if laplacian:
     output_data.columns = [i + "_laplacian" if i != "id" else i for i in output_data.columns]
 output_data = output_data.rename({"id": "sub"}, axis=1)
 
-timestamp = datetime.datetime.now().strftime("%m_%d_%Y_%H_%M_%S")
-
 if laplacian:
-    output_data.to_csv(f"{analysis_path}/derivatives/csv/{session}/read_erp_laplacian_{timestamp}.csv", index=False)
+    output_data.to_csv("{analysis_path}/derivatives/csv/{session}/read_erp_laplacian.csv", index=False)
 else:
-    output_data.to_csv(f"{analysis_path}/derivatives/csv/{session}/read_erp_{timestamp}.csv", index=False)
+    output_data.to_csv(f"{analysis_path}/derivatives/csv/{session}/read_erp.csv", index=False)

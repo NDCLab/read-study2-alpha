@@ -12,7 +12,8 @@ library(patchwork)
 
 # Initialize directory folders and load data----
 derivatives_dir <- "/home/data/NDClab/analyses/read-study2-alpha/derivatives/csv/s1_r1"
-read_df <- read_csv(file.path(derivatives_dir, "read_long_s1_r1_05_06_2026_17_28_50.csv"))
+read_df <- read_csv.path(derivatives_dir, "read_long_s1_r1_02_06_2026_11_18_10.csv")
+#read_df <- read_csv(file.path(derivatives_dir, "read_long_s1_r1_05_06_2026_17_28_50.csv")) # woody filtered
 read_df_wide <- read_csv(file.path(derivatives_dir, "read_wide_s1_r1_02_06_2026_11_18_10.csv"))
 
 #read_df <- read_df |> filter(!(sub %in% failed_deception))
@@ -34,6 +35,8 @@ df_summary_long <- read_df |>
   group_by(sub, soc) |>
   summarise(
     deltaERN = amplitude[acc == 0] - amplitude[acc == 1],
+    ERN = amplitude[acc == 0],
+    CRN = amplitude[acc == 1],
     thetapower = first(power_early_diff),
     spaic = first(spaic_scrdTotal_s1_r1_e1),
     age = first(age_m),
@@ -118,6 +121,8 @@ df_summary_long$spaip_s <- scale(df_summary_long$spaip)
 df_summary_long$deltaERN_s <- scale(df_summary_long$deltaERN)
 df_summary_long$thetapower_s <- scale(df_summary_long$thetapower)
 df_summary_long$ITPS_s <- scale(df_summary_long$ITPS)
+df_summary_long$ERN_s <- scale(df_summary_long$ERN)
+df_summary_long$CRN_s <- scale(df_summary_long$CRN)
 #df_summary_long$acc_s <- scale(df_summary_long$acc)
 #df_summary_long$acc_con_s <- scale (df_summary_long$acc_con)
 #df_summary_long$acc_incon_s <- scale (df_summary_long$acc_incon)
@@ -149,10 +154,10 @@ df_summary_wide <- df_summary_long |>
 
 # Aim #1: Social Anxiety x Social Observation x Age predicting ERN model----
 ### Mixed effect modeling---- 
-model_lm_spaic_int_lmer <- lmer(deltaERN_s ~ spaic_s * soc + age_s + sex + (1|sub), data = df_summary_long)
+model_lm_spaic_int_lmer <- lmer(ERN_s ~ spaic_s * soc + age_s + sex + (1|sub), data = df_summary_long)
 summary(model_lm_spaic_int_lmer)
 
-model_lm_spaip_int_lmer <- lmer(deltaERN_s ~ spaip_s * soc + age_s + sex + (1|sub), data = df_summary_long)
+model_lm_spaip_int_lmer <- lmer(ERN_s ~ spaip_s * soc + age_s + sex + (1|sub), data = df_summary_long)
 summary(model_lm_spaip_int_lmer)
 
 #### Interaction plots----
@@ -255,10 +260,10 @@ ggsave("model_lm_spaip_int_lmer.png",
        dpi = 600)
 
 # Aim #2: Social Anxiety x Social Observation x Age predicting Midfrontal Theta power model----
-model_lm_spaictheta_int_lmer <- lmer(thetapower_s ~ spaic_s * soc + sex + (1|sub), data = df_summary_long)
+model_lm_spaictheta_int_lmer <- lmer(thetapower_s ~ spaic_s * soc + sex + age + (1|sub), data = df_summary_long)
 summary(model_lm_spaictheta_int_lmer)
 
-model_lm_spaiptheta_int_lmer <- lmer(thetapower_s ~ spaip_s * soc + sex + (1|sub), data = df_summary_long)
+model_lm_spaiptheta_int_lmer <- lmer(thetapower_s ~ spaip_s * soc + sex + age + (1|sub), data = df_summary_long)
 summary(model_lm_spaiptheta_int_lmer)
 
 interact_plot(
